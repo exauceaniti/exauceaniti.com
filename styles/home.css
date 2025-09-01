@@ -1,0 +1,234 @@
+/**
+ * SECTION HERO
+ * Section d'introduction principale avec effet visuel accrocheur
+ */
+
+/* Conteneur principal de la section hero */
+/* Dégradé de couleur en diagonale pour un effet moderne */
+/* Couleur de texte blanc pour contraste */
+/* Espacement vertical important */
+.hero {
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+    color: white;
+    padding: 4rem 0;
+}
+
+/* Conteneur du contenu hero */
+/* Disposition flexible pour aligner texte et image */
+/* Centrage vertical des éléments */
+/* Répartition de l'espace entre les éléments */
+/* Espacement entre les colonnes */
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+/* Titre principal du hero */
+/* Taille de police très grande pour impact visuel */
+/* Espacement réduit en dessous */
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Sous-titre du hero */
+/* Taille de police intermédiaire */
+/* Espacement en dessous */
+/* Couleur gris très clair pour différenciation */
+.hero-text h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #ecf0f1;
+}
+
+/* Paragraphe descriptif du hero */
+/* Taille de police légèrement augmentée */
+/* Espacement important en dessous */
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Bouton Call-to-Action (CTA) */
+/* Affichage en bloc inline pour contrôle des dimensions */
+/* Fond rouge vif pour attirer l'attention */
+/* Couleur de texte blanc pour contraste */
+/* Espacement interne généreux */
+/* Coins arrondis pour style moderne */
+/* Suppression du soulignement */
+/* Texte en gras */
+/* Transition fluide pour l'effet de survol */
+.cta-button {
+    display: inline-block;
+    background-color: #e74c3c;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+/* Effet au survol du bouton CTA */
+/* Fond rouge plus foncé pour feedback visuel */
+.cta-button:hover {
+    background-color: #c0392b;
+}
+
+/* Conteneur de l'image personnelle */
+/* Dimensions carrées fixes */
+/* Forme circulaire via border-radius */
+/* Ajustement de l'image pour couvrir l'espace sans déformation */
+/* Bordure semi-transparente pour effet de profondeur */
+.Mon-image img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Effet au survol de l'image personnelle */
+/* Légère augmentation d'échelle pour animation */
+/* Transition fluide pour l'animation */
+.Mon-image img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/**
+ * SECTION QUICK LINKS
+ * Section des liens rapides vers les principales sections
+ */
+
+/* Conteneur de la section quick links */
+/* Espacement vertical important */
+.quick-links {
+    padding: 4rem 0;
+}
+
+/* Titre de la section quick links */
+/* Centrage du texte */
+/* Espacement important en dessous */
+/* Couleur de texte sombre */
+.quick-links h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #2c3e50;
+}
+
+/* Grille des cartes de liens rapides */
+/* Affichage en grille CSS */
+/* Disposition responsive avec ajustement automatique */
+/* Espacement entre les cartes */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Carte individuelle de lien rapide */
+/* Fond blanc pour mise en évidence */
+/* Espacement interne généreux */
+/* Coins arrondis pour design moderne */
+/* Ombre légère pour effet de profondeur */
+/* Transition fluide pour les transformations */
+.card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Effet au survol d'une carte */
+/* Légère élévation vers le haut */
+/* Ombre plus prononcée pour accentuer l'élévation */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Titre de la carte */
+/* Couleur de texte sombre */
+/* Espacement en dessous */
+.card h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+/* Paragraphe descriptif de la carte */
+/* Espacement en dessous */
+/* Couleur grise pour différenciation */
+.card p {
+    margin-bottom: 1.5rem;
+    color: #7f8c8d;
+}
+
+/* Lien à l'intérieur de la carte */
+/* Couleur bleue pour identification de lien */
+/* Suppression du soulignement */
+/* Texte en gras */
+/* Affichage en bloc inline */
+/* Transition fluide pour le changement de couleur */
+.card-link {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: color 0.3s;
+}
+
+/* Effet au survol du lien */
+/* Couleur bleue plus foncée */
+.card-link:hover {
+    color: #2980b9;
+}
+
+/**
+ * RESPONSIVE DESIGN
+ * Adaptations pour les appareils mobiles
+ */
+
+/* Media Query pour les écrans de tablette et mobile */
+@media (max-width: 768px) {
+    /* Adaptation du contenu hero en colonne */
+    /* Centrage du texte */
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    /* Réduction de la taille du titre principal */
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+    
+    /* Ajustements supplémentaires pourraient être ajoutés ici */
+    /* pour les très petits écrans */
+}
+
+/* Media Query pour les très petits écrans (optionnel) */
+@media (max-width: 480px) {
+    /* Réduction supplémentaire de la taille de police */
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    
+    /* Ajustement de la taille de l'image */
+    .Mon-image img {
+        width: 250px;
+        height: 250px;
+    }
+    
+    /* Adaptation de l'espacement */
+    .hero {
+        padding: 3rem 0;
+    }
+    
+    .quick-links {
+        padding: 3rem 0;
+    }
+}

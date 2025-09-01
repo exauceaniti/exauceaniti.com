@@ -1,0 +1,277 @@
+/**
+ * SECTION DES FORMATIONS
+ * Styles pour l'affichage chronologique des formations et certifications
+ */
+
+/* Section principale des formations */
+/* Espacement vertical important pour aérer la section */
+.formations-section {
+    padding: 4rem 0;
+}
+
+/* Titre principal de la section */
+/* Centrage du texte */
+/* Espacement important en dessous du titre */
+/* Couleur de texte sombre pour un bon contraste */
+.formations-section h1 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #2c3e50;
+}
+
+/* Conteneur principal de la timeline */
+/* Position relative pour le positionnement absolu des enfants */
+/* Largeur maximale pour contrôler l'étendue */
+/* Centrage horizontal et espacement en bas */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+}
+
+/* Ligne verticale centrale de la timeline */
+/* Crée un pseudo-élément pour la ligne */
+/* Position absolue pour le placement précis */
+/* Largeur et couleur de la ligne */
+/* S'étend du haut vers le bas */
+/* Centrage horizontal exact */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: #3498db;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+}
+
+/* Élément individuel de la timeline */
+/* Position relative pour le positionnement des enfants */
+/* Prend 50% de largeur pour alternance gauche/droite */
+/* Espacement entre les éléments */
+.timeline-item {
+    position: relative;
+    width: 50%;
+    margin-bottom: 3rem;
+}
+
+/* Éléments impairs (positionnés à gauche) */
+/* Alignement à gauche */
+/* Espacement à droite pour éloigner du centre */
+.timeline-item:nth-child(odd) {
+    left: 0;
+    padding-right: 3rem;
+}
+
+/* Éléments pairs (positionnés à droite) */
+/* Décalage de 50% vers la droite */
+/* Espacement à gauche pour éloigner du centre */
+.timeline-item:nth-child(even) {
+    left: 50%;
+    padding-left: 3rem;
+}
+
+/* Conteneur de la date dans la timeline */
+/* Fond bleu pour mettre en évidence */
+/* Texte blanc pour contraste */
+/* Espacement interne */
+/* Coins arrondis */
+/* Texte en gras */
+/* Affichage en bloc inline */
+/* Espacement en dessous */
+.timeline-date {
+    background: #3498db;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+/* Conteneur du contenu de chaque élément de timeline */
+/* Fond blanc pour faire ressortir le contenu */
+/* Espacement interne */
+/* Coins arrondis */
+/* Ombre légère pour la profondeur */
+/* Position relative pour les pseudo-éléments */
+.timeline-content {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Point indicateur sur la ligne de timeline */
+/* Crée un pseudo-élément circulaire */
+/* Position absolue pour placement précis */
+/* Dimension et forme circulaire */
+/* Couleur bleue correspondante */
+.timeline-content::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #3498db;
+    border-radius: 50%;
+    top: 20px;
+}
+
+/* Positionnement du point pour les éléments impairs (gauche) */
+/* Placement à droite du contenu */
+.timeline-item:nth-child(odd) .timeline-content::after {
+    right: -10px;
+}
+
+/* Positionnement du point pour les éléments pairs (droite) */
+/* Placement à gauche du contenu */
+.timeline-item:nth-child(even) .timeline-content::after {
+    left: -10px;
+}
+
+/* Titre de la formation dans la timeline */
+/* Couleur de texte sombre */
+/* Espacement en dessous */
+.timeline-content h3 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+/* Sous-titre (établissement) dans la timeline */
+/* Couleur grise pour différenciation */
+/* Espacement en dessous */
+/* Style italique pour l'accent */
+.timeline-content h4 {
+    color: #7f8c8d;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+/* Paragraphe descriptif dans la timeline */
+/* Couleur de texte standard */
+/* Hauteur de ligne confortable pour la lecture */
+.timeline-content p {
+    color: #34495e;
+    line-height: 1.6;
+}
+
+/* Titre de la section des certifications */
+/* Centrage du texte */
+/* Espacement en dessous */
+/* Couleur de texte sombre */
+.certifications-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+}
+
+/* Grille des certifications */
+/* Affichage en grille CSS */
+/* Disposition responsive avec ajustement automatique */
+/* Espacement entre les cartes */
+.certifications {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Carte individuelle de certification */
+/* Fond blanc pour mise en évidence */
+/* Espacement interne */
+/* Coins arrondis */
+/* Ombre légère pour la profondeur */
+/* Centrage du texte */
+.certification-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Titre de la certification */
+/* Couleur de texte sombre */
+/* Espacement en dessous */
+.certification-card h3 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+/* Texte descriptif de la certification */
+/* Couleur grise pour différenciation */
+.certification-card p {
+    color: #7f8c8d;
+}
+
+/* Lien stylisé pour portfolio */
+/* Couleur bleue moderne avec texte sans soulignement */
+/* Transition fluide au survol */
+.lien {
+    color: #00bcd4;
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Soulignement animé au survol */
+/* Ligne fine qui apparaît en glissant de la gauche */
+.lien::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: #00bcd4;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+/* Effet de survol */
+/* Changement de couleur du texte et apparition de la ligne */
+.lien:hover {
+    color: #2b768d;
+}
+
+.lien:hover::after {
+    transform: scaleX(1);
+}
+
+/**
+ * RESPONSIVE DESIGN
+ * Adaptations pour les écrans plus petits
+ */
+
+/* Media Query pour les écrans de tablette et plus petits */
+@media (max-width: 768px) {
+
+    /* Ajustement de la ligne de timeline sur mobile */
+    /* Déplacement vers la gauche */
+    .timeline::after {
+        left: 31px;
+    }
+    
+    /* Ajustement des éléments de timeline sur mobile */
+    /* Pleine largeur */
+    /* Espacement à gauche pour la ligne */
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 0;
+    }
+    
+    /* Réinitialisation du décalage pour les éléments pairs */
+    .timeline-item:nth-child(even) {
+        left: 0;
+    }
+    
+    /* Positionnement des points sur mobile */
+    /* Alignement à gauche cohérent */
+    .timeline-content::after {
+        left: 20px !important;
+    }
+}

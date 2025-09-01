@@ -1,0 +1,156 @@
+/**
+ * SECTION DES PROJETS
+ * Styles pour l'affichage des projets en grille avec cartes
+ */
+
+/* Section principale des projets */
+/* Espacement vertical important pour aérer la section */
+.projects-section {
+    padding: 4rem 0;
+}
+
+/* Titre principal de la section */
+/* Centrage du texte */
+/* Espacement important en dessous du titre */
+/* Couleur de texte sombre pour un bon contraste */
+.projects-section h1 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #2c3e50;
+}
+
+/* Grille des projets */
+/* Affichage en grille CSS pour une disposition responsive */
+/* Crée des colonnes qui s'adaptent automatiquement avec une largeur minimale */
+/* Espacement entre les éléments de la grille */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Carte individuelle de projet */
+/* Fond blanc pour faire ressortir la carte */
+/* Coins arrondis pour un design moderne */
+/* Cache tout débordement pour les images */
+/* Ombre légère pour donner de la profondeur */
+/* Transition fluide pour les transformations et ombres */
+.project-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Effet au survol d'une carte de projet */
+/* Légère élévation vers le haut */
+/* Ombre plus prononcée pour accentuer l'élévation */
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Conteneur de l'image du projet */
+/* Hauteur fixe pour uniformiser l'affichage */
+/* Cache tout débordement d'image */
+.project-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+/* Image du projet à l'intérieur du conteneur */
+/* Prend toute la largeur du conteneur */
+/* Prend toute la hauteur du conteneur */
+/* Ajuste l'image pour couvrir tout l'espace sans déformation */
+/* Transition fluide pour les transformations */
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+/* Effet de zoom sur l'image au survol de la carte */
+/* Légère augmentation d'échelle pour un effet dynamique */
+.project-card:hover .project-image img {
+    transform: scale(1.05);
+}
+
+/* Conteneur du contenu textuel du projet */
+/* Espacement interne pour séparer le texte des bords */
+.project-content {
+    padding: 1.5rem;
+}
+
+/* Titre du projet */
+/* Couleur de texte sombre */
+/* Espacement en dessous */
+.project-content h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+/* Description du projet */
+/* Couleur grise pour différenciation */
+/* Espacement en dessous */
+/* Hauteur de ligne confortable pour la lecture */
+.project-content p {
+    color: #7f8c8d;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+/* Conteneur des technologies utilisées */
+/* Affichage flexible pour aligner les badges */
+/* Permet le retour à la ligne si nécessaire */
+/* Espacement entre les badges */
+/* Espacement en dessous */
+.technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Badge de technologie individuel */
+/* Fond gris très clair */
+/* Couleur de texte sombre */
+/* Espacement interne */
+/* Coins arrondis pour la forme de badge */
+/* Taille de police réduite */
+/* Texte en gras */
+.technologies span {
+    background: #ecf0f1;
+    color: #2c3e50;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Conteneur des liens de projet */
+/* Affichage flexible pour aligner les liens */
+/* Espacement entre les liens */
+.project-links {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Lien individuel de projet */
+/* Couleur bleue pour indiquer un lien cliquable */
+/* Suppression du soulignement par défaut */
+/* Texte en gras */
+/* Transition fluide pour le changement de couleur */
+.project-link {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+/* Effet au survol des liens de projet */
+/* Couleur bleue légèrement plus foncée */
+.project-link:hover {
+    color: #03436e;
+}

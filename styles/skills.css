@@ -1,0 +1,193 @@
+/**
+ * SECTION DES COMPÉTENCES
+ * Styles pour afficher les compétences avec des barres de progression
+ */
+
+/* Section principale des compétences */
+/* Espacement vertical important pour aérer la section */
+.skills-section {
+    padding: 4rem 0;
+}
+
+/* Titre principal de la section */
+/* Centrage du texte */
+/* Espacement important en dessous du titre */
+/* Couleur de texte sombre pour un bon contraste */
+.skills-section h1 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #2c3e50;
+}
+
+/* Conteneur des catégories de compétences */
+/* Utilisation de CSS Grid pour la mise en page */
+/* Grille responsive qui s'adapte automatiquement */
+/* Espacement entre les catégories */
+.skills-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Conteneur d'une catégorie de compétences */
+/* Fond blanc pour faire ressortir la catégorie */
+/* Espacement interne */
+/* Coins arrondis pour un design moderne */
+/* Ombre légère pour donner de la profondeur */
+/* Animation fluide au survol */
+.category {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Effet au survol d'une catégorie */
+/* Légère élévation */
+/* Ombre plus prononcée */
+.category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Titre de la catégorie (ex: "Développement Front-end") */
+/* Couleur de texte sombre */
+/* Espacement en dessous */
+/* Espacement sous le texte pour la bordure */
+/* Bordure colorée en bas pour séparer visuellement */
+.category h2 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #3498db;
+}
+
+/* Conteneur d'une compétence individuelle */
+/* Espacement entre les compétences */
+.skill {
+    margin-bottom: 1.5rem;
+}
+
+/* Supprime la marge du dernier élément */
+.skill:last-child {
+    margin-bottom: 0;
+}
+
+/* Conteneur du nom et du pourcentage de la compétence */
+/* Disposition flexible pour aligner le nom et le pourcentage */
+/* Répartit l'espace entre le nom et le pourcentage */
+/* Petit espace avant la barre de progression */
+.skill-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+/* Style pour le nom de la compétence */
+/* Texte en gras pour le mettre en évidence */
+/* Couleur de texte sombre */
+.skill-info span:first-child {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* Style pour le pourcentage de maîtrise */
+/* Couleur grise pour être moins visible que le nom */
+.skill-info span:last-child {
+    color: #7f8c8d;
+}
+
+/* Conteneur de la barre de progression (fond) */
+/* Hauteur de la barre */
+/* Couleur de fond gris clair */
+/* Coins arrondis */
+/* Cache le débordement de l'élément de progression */
+.skill-bar {
+    height: 8px;
+    background: #ecf0f1;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+/* Élément de progression (remplissage de la barre) */
+/* Prend toute la hauteur du conteneur */
+/* Dégradé de bleu */
+/* Coins arrondis */
+/* Largeur initiale à 0 (sera animée) */
+/* Animation fluide de l'agrandissement */
+.skill-progress {
+    height: 100%;
+    background: linear-gradient(90deg, #3498db 0%, #2980b9 100%);
+    border-radius: 4px;
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+/**
+ * ANIMATIONS ET INTERACTIONS
+ * Styles pour les effets dynamiques
+ */
+
+/* Légère amplification au survol */
+/* Agrandit légèrement la hauteur */
+/* Point d'origine de la transformation */
+.skill-bar:hover .skill-progress {
+    transform: scaleY(1.2);
+    transform-origin: center;
+}
+
+/**
+ * RESPONSIVE DESIGN
+ * Adaptations pour les écrans plus petits
+ */
+
+/* Media Query pour les écrans de tablette et plus petits */
+@media (max-width: 768px) {
+
+    /* Ajustements pour tablettes */
+    /* Réduction de l'espacement vertical */
+    .skills-section {
+        padding: 3rem 0;
+    }
+    
+    /* Adaptation de la grille pour mobiles */
+    /* Une seule colonne */
+    /* Espacement réduit */
+    .skills-categories {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    /* Ajustement des catégories pour mobiles */
+    /* Espacement interne réduit */
+    .category {
+        padding: 1.5rem;
+    }
+}
+
+/* Media Query pour les très petits écrans (mobile) */
+@media (max-width: 480px) {
+
+    /* Ajustement du titre pour petits écrans */
+    /* Taille de police réduite */
+    /* Espacement réduit */
+    .skills-section h1 {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+    
+    /* Ajustement supplémentaire pour très petits écrans */
+    /* Espacement interne encore réduit */
+    .category {
+        padding: 1.2rem;
+    }
+    
+    /* Ajustement de l'affichage des informations de compétence */
+    /* Empile le nom et le pourcentage */
+    /* Petit espace entre les éléments */
+    .skill-info {
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+}
