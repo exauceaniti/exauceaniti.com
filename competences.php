@@ -48,7 +48,7 @@
                                 <span>60%</span>
                             </div>
                             <div class="skill-bar">
-                                <div class="skill-progress" data-width="60%"></div>
+                                <div class="skill-progress" data-width="68%"></div>
                             </div>
                         </div>
                         <div class="skill">
@@ -70,7 +70,7 @@
                                 <span>75%</span>
                             </div>
                             <div class="skill-bar">
-                                <div class="skill-progress" data-width="75%"></div>
+                                <div class="skill-progress" data-width="60%"></div>
                             </div>
                         </div>
                         <div class="skill">
@@ -79,12 +79,12 @@
                                 <span>75%</span>
                             </div>
                             <div class="skill-bar">
-                                <div class="skill-progress" data-width="75%"></div>
+                                <div class="skill-progress" data-width="60%"></div>
                             </div>
                         </div>
                         <div class="skill">
                             <div class="skill-info">
-                                <span>VS Code</span>
+                                <span>VSCode</span>
                                 <span>90%</span>
                             </div>
                             <div class="skill-bar">

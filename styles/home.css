@@ -1,234 +1,468 @@
 /**
- * SECTION HERO
- * Section d'introduction principale avec effet visuel accrocheur
+ * HOME.CSS
+ * Styles spécifiques à la page d'accueil
+ * Inspiré du design Modernik
+ * Auteur: Exaucé Aniti
  */
 
-/* Conteneur principal de la section hero */
-/* Dégradé de couleur en diagonale pour un effet moderne */
-/* Couleur de texte blanc pour contraste */
-/* Espacement vertical important */
+/* ===== VARIABLES ===== */
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --accent-color: #00bcd4;
+  --text-dark: #333;
+  --text-medium: #5a6b7c;
+  --text-light: #7f8c8d;
+  --text-white: #ffffff;
+  --bg-light: #f5f7fa;
+  --bg-medium: #c3cfe2;
+  --bg-dark: #2c3e50;
+  --shadow-light: 0 10px 30px rgba(0,0,0,0.08);
+  --shadow-medium: 0 15px 40px rgba(0,0,0,0.12);
+  --shadow-heavy: 0 20px 40px rgba(0,0,0,0.15);
+  --border-radius: 15px;
+  --transition: all 0.3s ease;
+}
+
+/* ===== RÉINITIALISATION ET BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ===== STRUCTURE DES SECTIONS ===== */
+.section {
+  padding: 5rem 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.section-actions {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+/* ===== HERO SECTION ===== */
 .hero {
-    background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
-    color: white;
-    padding: 4rem 0;
+  padding: 8rem 0 5rem;
+  background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-medium) 100%);
 }
 
-/* Conteneur du contenu hero */
-/* Disposition flexible pour aligner texte et image */
-/* Centrage vertical des éléments */
-/* Répartition de l'espace entre les éléments */
-/* Espacement entre les colonnes */
+.hero .container {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
 .hero-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
+  flex: 1;
 }
 
-/* Titre principal du hero */
-/* Taille de police très grande pour impact visuel */
-/* Espacement réduit en dessous */
-.hero-text h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
+.hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
 }
 
-/* Sous-titre du hero */
-/* Taille de police intermédiaire */
-/* Espacement en dessous */
-/* Couleur gris très clair pour différenciation */
-.hero-text h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: #ecf0f1;
+.hero-title .accent {
+  display: block;
+  color: var(--secondary-color);
+  font-weight: 600;
 }
 
-/* Paragraphe descriptif du hero */
-/* Taille de police légèrement augmentée */
-/* Espacement important en dessous */
-.hero-text p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
+.hero-description {
+  font-size: 1.2rem;
+  color: var(--text-medium);
+  margin-bottom: 2rem;
+  line-height: 1.6;
 }
 
-/* Bouton Call-to-Action (CTA) */
-/* Affichage en bloc inline pour contrôle des dimensions */
-/* Fond rouge vif pour attirer l'attention */
-/* Couleur de texte blanc pour contraste */
-/* Espacement interne généreux */
-/* Coins arrondis pour style moderne */
-/* Suppression du soulignement */
-/* Texte en gras */
-/* Transition fluide pour l'effet de survol */
-.cta-button {
-    display: inline-block;
-    background-color: #e74c3c;
-    color: white;
-    padding: 0.8rem 1.5rem;
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s;
+.hero-actions {
+  display: flex;
+  gap: 1rem;
 }
 
-/* Effet au survol du bouton CTA */
-/* Fond rouge plus foncé pour feedback visuel */
-.cta-button:hover {
-    background-color: #c0392b;
+.hero-visual {
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
-/* Conteneur de l'image personnelle */
-/* Dimensions carrées fixes */
-/* Forme circulaire via border-radius */
-/* Ajustement de l'image pour couvrir l'espace sans déformation */
-/* Bordure semi-transparente pour effet de profondeur */
-.Mon-image img {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 5px solid rgba(255, 255, 255, 0.3);
+/* Image principale de l'héro */
+.hero-image {
+  width: 100%;
+  max-width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-heavy);
+  transform: perspective(800px) rotateY(-5deg);
+  transition: var(--transition);
+  border: 4px solid var(--text-white);
 }
 
-/* Effet au survol de l'image personnelle */
-/* Légère augmentation d'échelle pour animation */
-/* Transition fluide pour l'animation */
-.Mon-image img:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
+.hero-image:hover {
+  transform: perspective(800px) rotateY(0deg);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.2);
 }
 
-/**
- * SECTION QUICK LINKS
- * Section des liens rapides vers les principales sections
- */
-
-/* Conteneur de la section quick links */
-/* Espacement vertical important */
-.quick-links {
-    padding: 4rem 0;
+/* ===== BOUTONS ===== */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+  border: 2px solid transparent;
+  text-align: center;
+  cursor: pointer;
 }
 
-/* Titre de la section quick links */
-/* Centrage du texte */
-/* Espacement important en dessous */
-/* Couleur de texte sombre */
-.quick-links h2 {
+.btn-primary {
+  background-color: var(--secondary-color);
+  color: var(--text-white);
+}
+
+.btn-primary:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(52, 152, 219, 0.3);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+.btn-secondary:hover {
+  background-color: var(--secondary-color);
+  color: var(--text-white);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
+}
+
+.btn-outline:hover {
+  background-color: var(--secondary-color);
+  color: var(--text-white);
+}
+
+/* ===== COMPÉTENCES ===== */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.skill-category {
+  background: var(--text-white);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-light);
+  transition: transform 0.3s ease;
+}
+
+.skill-category:hover {
+  transform: translateY(-5px);
+}
+
+.skill-category h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.skill-name {
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+.skill-bar {
+  height: 8px;
+  background-color: #ecf0f1;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.skill-progress {
+  height: 100%;
+  background: linear-gradient(90deg, var(--secondary-color), #2980b9);
+  border-radius: 4px;
+  width: 0;
+}
+
+/* ===== PROJETS ===== */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background: var(--text-white);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-light);
+  transition: var(--transition);
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-medium);
+}
+
+.project-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.placeholder-project {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+}
+
+.project-content {
+  padding: 1.5rem;
+}
+
+.project-title {
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  color: var(--primary-color);
+}
+
+.project-description {
+  color: var(--text-light);
+  margin-bottom: 1.2rem;
+  line-height: 1.5;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.project-tech span {
+  background-color: #ecf0f1;
+  color: var(--secondary-color);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.project-link {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: gap 0.3s ease;
+}
+
+.project-link:hover {
+  gap: 0.8rem;
+}
+
+/* ===== PIED DE PAGE ===== */
+.footer {
+  background-color: var(--bg-dark);
+  color: var(--text-white);
+  padding: 4rem 0 2rem;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.footer-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
+  color: var(--secondary-color);
+}
+
+.footer-section p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.footer-section a {
+  display: block;
+  color: #ecf0f1;
+  text-decoration: none;
+  margin-bottom: 0.7rem;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: var(--secondary-color);
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-links a {
+  display: inline-block;
+  background: rgba(255,255,255,0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.social-links a:hover {
+  background: rgba(52, 152, 219, 0.3);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* ===== DESIGN RESPONSIVE ===== */
+@media (max-width: 968px) {
+  .hero .container {
+    flex-direction: column;
     text-align: center;
-    margin-bottom: 3rem;
-    color: #2c3e50;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-actions {
+    justify-content: center;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .hero-image {
+    max-width: 300px;
+    height: 300px;
+  }
 }
 
-/* Grille des cartes de liens rapides */
-/* Affichage en grille CSS */
-/* Disposition responsive avec ajustement automatique */
-/* Espacement entre les cartes */
-.cards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-/* Carte individuelle de lien rapide */
-/* Fond blanc pour mise en évidence */
-/* Espacement interne généreux */
-/* Coins arrondis pour design moderne */
-/* Ombre légère pour effet de profondeur */
-/* Transition fluide pour les transformations */
-.card {
-    background: white;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-/* Effet au survol d'une carte */
-/* Légère élévation vers le haut */
-/* Ombre plus prononcée pour accentuer l'élévation */
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-}
-
-/* Titre de la carte */
-/* Couleur de texte sombre */
-/* Espacement en dessous */
-.card h3 {
-    color: #2c3e50;
-    margin-bottom: 1rem;
-}
-
-/* Paragraphe descriptif de la carte */
-/* Espacement en dessous */
-/* Couleur grise pour différenciation */
-.card p {
-    margin-bottom: 1.5rem;
-    color: #7f8c8d;
-}
-
-/* Lien à l'intérieur de la carte */
-/* Couleur bleue pour identification de lien */
-/* Suppression du soulignement */
-/* Texte en gras */
-/* Affichage en bloc inline */
-/* Transition fluide pour le changement de couleur */
-.card-link {
-    color: #3498db;
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
-    transition: color 0.3s;
-}
-
-/* Effet au survol du lien */
-/* Couleur bleue plus foncée */
-.card-link:hover {
-    color: #2980b9;
-}
-
-/**
- * RESPONSIVE DESIGN
- * Adaptations pour les appareils mobiles
- */
-
-/* Media Query pour les écrans de tablette et mobile */
 @media (max-width: 768px) {
-    /* Adaptation du contenu hero en colonne */
-    /* Centrage du texte */
-    .hero-content {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    /* Réduction de la taille du titre principal */
-    .hero-text h1 {
-        font-size: 2.5rem;
-    }
-    
-    /* Ajustements supplémentaires pourraient être ajoutés ici */
-    /* pour les très petits écrans */
+  .hero {
+    padding: 6rem 0 3rem;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn {
+    width: 200px;
+  }
+  
+  .skills-grid,
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-image {
+    max-width: 250px;
+    height: 250px;
+  }
+  
+  .section {
+    padding: 3rem 0;
+  }
 }
 
-/* Media Query pour les très petits écrans (optionnel) */
-@media (max-width: 480px) {
-    /* Réduction supplémentaire de la taille de police */
-    .hero-text h1 {
-        font-size: 2rem;
-    }
-    
-    /* Ajustement de la taille de l'image */
-    .Mon-image img {
-        width: 250px;
-        height: 250px;
-    }
-    
-    /* Adaptation de l'espacement */
-    .hero {
-        padding: 3rem 0;
-    }
-    
-    .quick-links {
-        padding: 3rem 0;
-    }
+/* ===== CLASSES UTILITAIRES ===== */
+.text-center {
+  text-align: center;
+}
+
+.mb-1 { margin-bottom: 1rem; }
+.mb-2 { margin-bottom: 2rem; }
+.mt-1 { margin-top: 1rem; }
+.mt-2 { margin-top: 2rem; }
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease forwards;
 }

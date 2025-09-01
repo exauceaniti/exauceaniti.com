@@ -10,6 +10,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/contact.css">
+    <link rel="stylesheet" href="styles/footer.css">
 </head>
 <body>
     <?php include 'includes/header.php'; ?>
