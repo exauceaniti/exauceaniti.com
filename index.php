@@ -1,61 +1,34 @@
 <!DOCTYPE html>
 <html lang="fr">
 
-<!--
-     HEAD - EN-TÊTE DU DOCUMENT
-     Contient les métadonnées, liens CSS,
-     titre et ressources externes
- -->
 <head>
-    <!-- Encodage des caractères -->
-    <!-- Responsive design : adapte la page aux mobiles -->
-    <!-- Titre affiché dans l'onglet du navigateur -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exaucé Aniti - Développeur Web</title>
     
-    <!--
-         LIENS VERS LES FEUILLES DE STYLE
-         - main.css : styles globaux
-         - header.css : en-tête
-         - home.css : page d’accueil
-         - cards.css : cartes projets
-         - footer.css : pied de page
-         - Google Fonts (Inter)
-     -->
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/home.css">
     <link rel="stylesheet" href="styles/cards.css">
     <link rel="stylesheet" href="styles/footer.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Intégration de Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<!--FIN DE L'EN-TÊTE-->
-
 
 <body>
-<!--
-     HEADER - EN-TÊTE DU SITE
-     Contient le logo, la navigation et 
-     le menu mobile
- -->
 <header class="header">
     <div class="container">
-        <!-- LOGO ET TITRE DU SITE -->
         <div class="logo">
             <a href="index.php">Exaucé Aniti<span>Développeur Web</span></a>
         </div>
   
-
-        <!-- BOUTON MENU BURGER POUR MOBILE -->
         <button class="menu-toggle" aria-label="Menu mobile">
             <span></span>
             <span></span>
             <span></span>
         </button>
     
-
-        <!-- NAVIGATION PRINCIPALE -->
         <nav class="nav">
             <ul>
                 <li><a href="index.php" class="active">Accueil</a></li>
@@ -69,13 +42,8 @@
     </div>
 </header>
 
-
-
-<!--MENU OVERLAY MOBILE Fond sombre affiché lorsque le menu est ouvert-->
 <div class="menu-overlay"></div>
 
-
-<!--HERO SECTION Présentation avec titre, description,boutons d’action et image-->
 <section class="hero">
     <div class="container">
         <div class="hero-content">
@@ -92,8 +60,6 @@
     </div>
 </section>
 
-
-<!--SECTION COMPÉTENCES Présentation des compétences techniques avec barres de progression-->
 <section class="section skills">
     <div class="container">
         <div class="section-header">
@@ -102,7 +68,6 @@
         </div>
         
         <div class="skills-grid">
-            <!-- FRONTEND SKILLS -->
             <div class="skill-category">
                 <h3>Frontend</h3>
                 <div class="skills-list">
@@ -121,7 +86,6 @@
                 </div>
             </div>
          
-            <!-- BACKEND SKILLS -->
             <div class="skill-category">
                 <h3>Backend</h3>
                 <div class="skills-list">
@@ -140,7 +104,6 @@
                 </div>
             </div>
     
-            <!-- OUTILS & AUTRES -->
             <div class="skill-category">
                 <h3>Outils & autres</h3>
                 <div class="skills-list">
@@ -168,8 +131,6 @@
     </div>
 </section>
 
-
-<!--SECTION PROJETS RÉCENTS Présentation d'une sélection de projets avec technologies utilisées-->
 <section class="section projects">
     <div class="container">
         <div class="section-header">
@@ -178,26 +139,8 @@
         </div>
         
         <div class="projects-grid">
-            <!-- PROJET 1 -->
-            <div class="project-card">
-                <div class="project-image">
-                    <div class="placeholder-project"></div>
-                </div>
-                <div class="project-content">
-                    <h3 class="project-title">Application E-commerce</h3>
-                    <p class="project-description">Plateforme complète avec gestion de produits, panier et paiement.</p>
-                    <div class="project-tech">
-                        <span>React</span>
-                        <span>Node.js</span>
-                        <span>MongoDB</span>
-                    </div>
-                    <a href="#" class="project-link">Voir le projet →</a>
-                </div>
-            </div>
-            <!-- FIN PROJET 1 -->
 
-            <!-- PROJET 2 -->
-            <div class="project-card">
+                       <div class="project-card">
                 <div class="project-image">
                     <div class="placeholder-project"></div>
                 </div>
@@ -212,80 +155,129 @@
                     <a href="#" class="project-link">Voir le projet →</a>
                 </div>
             </div>
-            <!-- FIN PROJET 2 -->
 
-            <!-- PROJET 3 -->
             <div class="project-card">
                 <div class="project-image">
                     <div class="placeholder-project"></div>
                 </div>
                 <div class="project-content">
-                    <h3 class="project-title">Application Web Mobile</h3>
-                    <p class="project-description">Application responsive avec fonctionnalités avancées et PWA.</p>
+                    <h3 class="project-title">Application Gestion Contact Project Back2</h3>
+                    <p class="project-description"> Cette Plateforme est encore en cours de develloppement.</p>
                     <div class="project-tech">
-                        <span>Vue.js</span>
-                        <span>Firebase</span>
-                        <span>SCSS</span>
+                        <span>Java</span>
+                        <span>Swing</span>
+                        <span>MySQL</span>
                     </div>
                     <a href="#" class="project-link">Voir le projet →</a>
                 </div>
             </div>
-            <!-- FIN PROJET 3 -->
+
+
+            <div class="project-card">
+                <div class="project-image">
+                    <div class="placeholder-project"></div>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Project Maseka-Food</h3>
+                    <p class="project-description">Application responsive avec fonctionnalités avancées Pour la vente en ligne,
+                        des pattisserie pour MasekaFood.</p>
+                    <div class="project-tech">
+                        <span>PHP</span>
+                        <span>MySQL</span>
+                        <span>SCSS</span>
+                        <span>JavaScript</span>
+                        <span>HTML</span>
+                    </div>
+                    <a href="#" class="project-link">Voir le projet →</a>
+                </div>
+            </div>
         </div>
         
-        <!-- BOUTON POUR VOIR TOUS LES PROJETS -->
         <div class="section-actions">
             <a href="project.php" class="btn btn-outline">Voir tous les projets</a>
         </div>
     </div>
 </section>
 
-
-<!--FOOTER Pied de page avec infos, liens et réseaux-->
+<!-- NOUVEAU FOOTER AMÉLIORÉ -->
 <footer class="footer">
     <div class="container">
+        <!-- CONTENEUR PRINCIPAL DU FOOTER -->
         <div class="footer-content">
-            <!-- SECTION DESCRIPTION -->
-            <div class="footer-section">
-                <h3>Contactez-nous dès maintenant, sans hésiter</h3>
-                <p>Vous avez une idée, un projet ou un besoin web ?
-                    Nous sommes la pour transforme vos visions en solutions digitales modernes, rapides et sur mesure.
-                    Que ce soit pour un site vitrine, une application web ou une refonte complète,
-                    Nous sommes là pour vous accompagner avec expertise et passion.</p>
+            
+            <!-- PREMIÈRE COLONNE : DESCRIPTION ET APPEL À L'ACTION -->
+            <div class="footer-section footer-about">
+                <h3>Prêt à concrétiser votre projet web ?</h3>
+                <p>Contactez-mous dès maintenant pour discuter de votre vision et voir comment nous pouvons la transformer en réalité numérique ensemble.</p>
+                <a href="contact.php" class="btn btn-footer">Démarrer un projet</a>
             </div>
-                        <!-- SECTION NAVIGATION -->
+            
+            <!-- DEUXIÈME COLONNE : LIENS DE NAVIGATION RAPIDE -->
             <div class="footer-section">
                 <h3>Navigation</h3>
-                <a href="index.php">Accueil</a>
-                <a href="about.php">À propos</a>
-                <a href="competences.php">Compétences</a>
-                <a href="project.php">Projets</a>
-                <a href="contact.php">Contact</a>
+                <ul>
+                    <li><a href="index.php">Accueil</a></li>
+                    <li><a href="about.php">À propos</a></li>
+                    <li><a href="competences.php">Compétences</a></li>
+                    <li><a href="project.php">Projets</a></li>
+                    <li><a href="contact.php">Contact</a></li>
+                </ul>
             </div>
-            <!-- FIN NAVIGATION -->
-
-            <!-- SECTION CONTACT -->
+            
+            <!-- TROISIÈME COLONNE : SERVICES OFFERTS -->
             <div class="footer-section">
-                <h3>Contact</h3>
-                <p>Email: exauce.aniti@example.com</p>
-                <p>Téléphone: +243 820 853 461</p>
-               <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Développement Frontend</a></li>
+                    <li><a href="#">Développement Backend</a></li>
+                    <li><a href="#">Sites E-commerce</a></li>
+                    <li><a href="#">Applications Web</a></li>
+                    <li><a href="#">Refonte de sites</a></li>
+                </ul>
+            </div>
+            
+            <!-- QUATRIÈME COLONNE : COORDONNÉES ET RÉSEAUX SOCIAUX -->
+            <div class="footer-section footer-contact">
+                <h3>Restons en contact</h3>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>exauceaniti@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+243 820 853 461</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>RDC, Butembo, Kalemire</span>
+                    </div>
+                </div>
+                
                 <div class="social-links">
-                <a href="https://wa.me/243820853461"><i class="fab fa-whatsapp"></i></a>
-                <a href="mailto:exauce.aniti@example.com"><i class="fas fa-envelope"></i></a>
-                <a href="https://www.facebook.com/exauce.aniti"><i class="fab fa-facebook"></i></a>
-                <a href="https://github.com/exauceaniti"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/exauce-aniti"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://wa.me/243820853461" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:exauce.aniti@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.facebook.com/exauce.aniti" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://github.com/exauceaniti" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/exauce-aniti" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
-            <!-- FIN CONTACT -->
+            
         </div>
         
+        <!-- BARRE DE BAS DE PAGE : DROITS D'AUTEUR -->
         <div class="footer-bottom">
-            <p>&copy; 2023 Exaucé Aniti. Tous droits réservés.</p>
+            <div class="footer-bottom-content">
+                <p>&copy; 2023 Exaucé Aniti. Tous droits réservés.</p>
+                <div class="legal-links">
+                    <a href="#">Politique de confidentialité</a>
+                    <a href="#">Conditions d'utilisation</a>
+                </div>
+            </div>
         </div>
     </div>
 </footer>
+
 <script src="scripts/main.js"></script>
 
 </body>

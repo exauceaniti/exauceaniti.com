@@ -77,7 +77,8 @@
                         </div>
                         <div class="project-content">
                             <h3>Application de Gestion de Tâches</h3>
-                            <p>Une application web responsive permettant de créer, organiser et suivre l'avancement des tâches quotidiennes.</p>
+                            <p>Une application web responsive permettant de créer, organiser et suivre l'avancement des tâches quotidiennes.
+                               <strong>Mais elle est encore en cours de develloppement</strong> 
                             <div class="technologies">
                                 <span>HTML/CSS</span>
                                 <span>JavaScript</span>
@@ -91,59 +92,58 @@
                         </div>
                     </div>
                     
-                    <!-- CARTE DE PROJET 3: Plateforme E-commerce
+                    <!-- CARTE DE PROJET 3: Plateforme E-commerce -->
                     <div class="project-card">
                         <div class="project-image">
-                            <img src="images/project2.jpg" alt="Site e-commerce">
+                            <img src="images/Maseka-Food.png" alt="Site e-commerce">
                         </div>
                         <div class="project-content">
-                            <h3>Plateforme E-commerce</h3>
-                            <p>Développement d'une boutique en ligne complète avec gestion de produits, panier d'achat et système de paiement.</p>
+                            <h3>Plateforme E-commerce Maseka-Food</h3>
+                            <p>Développement d'une boutique en ligne complète avec gestion de produits, panier d'achat et système de paiement.
+                                <strong>Application En Cours de develloppement</strong>
+                            </p>
                             <div class="technologies">
-                                <span>React.js</span>
-                                <span>Node.js</span>
-                                <span>MongoDB</span>
-                                <span>Stripe API</span>
+                                <span>PHP</span>
+                                <span>MySQL</span>
+                                <span>SCSS</span>
+                                <span>JavaScript</span>
+                                <span>HTML</span>
                             </div>
                             <div class="project-links">
                                 <a href="#" class="project-link">Voir le projet</a>
                                 <a href="#" class="project-link">Code source</a>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
                     
-                    <!-- CARTE DE PROJET 4: Application Météo
+                    <!-- CARTE DE PROJET 4: Application Météo-->
                     <div class="project-card">
                         <div class="project-image">
-                            <img src="images/project3.jpg" alt="Application météo">
+                            <img src="images/GestionContact.png" alt="Application météo">
                         </div>
                         <div class="project-content">
-                            <h3>Application Météo</h3>
-                            <p>Application mobile fournissant les prévisions météorologiques en temps réel avec une interface utilisateur intuitive.</p>
+                            <h3>Application Gestion Contact Project Back2</h3>
+                            <p>Application permetant de Gerer les contactes dans une asociations ou n'importe ou avec une interface fluide cote Admin et User.
+                                <strong>L'Application est en cours de develloppement</strong>
+                            </p>
                             <div class="technologies">
-                                <span>React Native</span>
-                                <span>API REST</span>
-                                <span>Redux</span>
+                                <span>Java</span>
+                                <span>Swing</span>
+                                <span>MySQL</span>
                             </div>
                             <div class="project-links">
                                 <a href="#" class="project-link">Voir le projet</a>
                                 <a href="#" class="project-link">Code source</a>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
                     
                 </div>
-                <!-- Fin de la grille de projets -->
             </div>
-            <!-- Fin du conteneur -->
         </section>
-        <!-- Fin de la section projets -->
     </main>
-    <!-- Fin du contenu principal -->
 
-    <!-- Inclusion du pied de page -->
     <?php include 'includes/footer.php'; ?>
-    <!-- Script JavaScript spécifique à la page projets -->
-    <script src="scripts/projects.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
 </html>

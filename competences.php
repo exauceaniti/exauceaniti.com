@@ -52,6 +52,17 @@
                                 <div class="skill-progress" data-width="68%"></div>
                             </div>
                         </div>
+                        
+                        <div class="skill">
+                            <div class="skill-info">
+                                <span>Java</span>
+                                <span>50%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="50%"></div>
+                            </div>
+                        </div>
+
                         <div class="skill">
                             <div class="skill-info">
                                 <span>MySQL</span>
