@@ -17,12 +17,10 @@
     
     <!-- Feuilles de style principales -->
     <link rel="stylesheet" href="styles/main.css">
-    <!-- Styles spécifiques à l'en-tête -->
     <link rel="stylesheet" href="styles/header.css">
-    <!-- Styles spécifiques à la page projets -->
     <link rel="stylesheet" href="styles/projects.css">
-    <!-- Styles des cartes de projet -->
     <link rel="stylesheet" href="styles/cards.css">
+    <link rel="stylesheet" href="styles/footer.css">
 </head>
 <body>
     <!-- Inclusion de l'en-tête du site (logique commune) -->
