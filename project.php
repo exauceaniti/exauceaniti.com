@@ -1,70 +1,46 @@
-<!--
-  PAGE PROJETS - MON PORTFOLIO
-  Cette page présente les projets réalisés avec une grille de cartes
-  Auteur: Exaucé Aniti
-  Date: 2023
--->
 <!DOCTYPE html>
-<!-- Déclaration du type de document et langue -->
 <html lang="fr">
 <head>
-    <!-- Encodage des caractères pour support étendu -->
     <meta charset="UTF-8">
-    <!-- Configuration viewport pour le responsive design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Titre de la page dans l'onglet du navigateur -->
-    <title>Projets - Mon CV</title>
+    <title>Projets - Mon Portfolio</title>
     
-    <!-- Feuilles de style principales -->
+    <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Feuilles de style -->
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/projects.css">
     <link rel="stylesheet" href="styles/cards.css">
-    <link rel="stylesheet" href="styles/footer.css">
+    <!-- <link rel="stylesheet" href="styles/footer.css"> -->
 </head>
 <body>
-    <!-- Inclusion de l'en-tête du site (logique commune) -->
+    <!-- Inclusion de l'en-tête du site -->
     <?php include 'includes/header.php'; ?>
-    <!-- Inclusion de la navigation principale -->
     <?php include 'includes/navigation.php'; ?>
     
-    <!-- Contenu principal de la page -->
     <main class="main-content">
-        <!-- Section dédiée aux projets -->
         <section class="projects-section">
-            <!-- Conteneur pour centrage et gestion des largeurs -->
             <div class="container">
-                <!-- Titre principal de la section -->
                 <h1>Mes Projets</h1>
                 
-                <!-- Grille contenant tous les projets -->
                 <div class="projects-grid">
-
                     <!-- CARTE DE PROJET 1: Portfolio Personnel -->
                     <div class="project-card">
-                        <!-- Conteneur de l'image du projet -->
                         <div class="project-image">
-                            <!-- Image représentative du projet -->
                             <img src="images/ImagePortofolio.png" alt="Portfolio personnel">
                         </div>
-                        <!-- Contenu textuel du projet -->
                         <div class="project-content">
-                            <!-- Titre du projet -->
                             <h3>Portfolio Personnel</h3>
-                            <!-- Description concise du projet -->
                             <p>Conception et développement d'un site portfolio responsive pour présenter mes compétences et projets.</p>
-                            <!-- Liste des technologies utilisées -->
                             <div class="technologies">
-                                <!-- Badges des technologies -->
                                 <span>HTML/CSS</span>
                                 <span>JavaScript</span>
                                 <span>PHP</span>
                             </div>
-                            <!-- Liens d'action vers le projet -->
                             <div class="project-links">
-                                <!-- Lien vers la démo live du projet -->
                                 <a href="#" class="project-link">Voir le projet</a>
-                                <!-- Lien vers le code source (GitHub, etc.) -->
                                 <a href="#" class="project-link">Code source</a>
                             </div>
                         </div>
@@ -79,6 +55,7 @@
                             <h3>Application de Gestion de Tâches</h3>
                             <p>Une application web responsive permettant de créer, organiser et suivre l'avancement des tâches quotidiennes.
                                <strong>Application en cours de develloppement</strong>
+                            </p>
                             <div class="technologies">
                                 <span>HTML/CSS</span>
                                 <span>JavaScript</span>
@@ -116,10 +93,10 @@
                         </div>
                     </div>
                     
-                    <!-- CARTE DE PROJET 4: Application Météo-->
+                    <!-- CARTE DE PROJET 4: Application Gestion Contact -->
                     <div class="project-card">
                         <div class="project-image">
-                            <img src="images/GestionContact.png" alt="Application météo">
+                            <img src="images/GestionContact.png" alt="Application gestion contact">
                         </div>
                         <div class="project-content">
                             <h3>Application Gestion Contact Project Back2</h3>
@@ -137,13 +114,100 @@
                             </div>
                         </div>
                     </div>
-                    
                 </div>
             </div>
         </section>
     </main>
 
-    <?php include 'includes/footer.php'; ?>
+<!-- FOOTER SPÉCIFIQUE AUX PROJETS -->
+<footer class="footer-projects">
+    <div class="container">
+        <!-- SECTION DE CONTACT AVEC BOUTON -->
+        <div class="footer-projects-contact">
+            <h2>Prêt à concrétiser votre vision?</h2>
+            <p>Discutons de la façon dont nous pouvons collaborer pour transformer vos idées en solutions numériques exceptionnelles.</p>
+            <a href="contact.php" class="btn-projects-contact">
+                <i class="fas fa-paper-plane"></i>
+                Contactez-moi
+            </a>
+        </div>
+        
+        <!-- CONTENEUR PRINCIPAL DU FOOTER PROJETS -->
+        <div class="footer-projects-content">
+            <!-- PREMIÈRE COLONNE : DESCRIPTION -->
+            <div class="footer-projects-section footer-projects-about">
+                <h3>Exaucé Aniti - Développeur Web</h3>
+                <p>Je spécialise dans la création d'expériences web modernes et performantes, en transformant des concepts complexes en interfaces élégantes et fonctionnelles.</p>
+                <a href="contact.php" class="btn-projects">Démarrer un projet</a>
+            </div>
+            
+            <!-- DEUXIÈME COLONNE : LIENS DE NAVIGATION RAPIDE -->
+            <div class="footer-projects-section">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="index.php">Accueil</a></li>
+                    <li><a href="about.php">À propos</a></li>
+                    <li><a href="formations.php">Formations</a></li>
+                    <li><a href="competences.php">Compétences</a></li>
+                    <li><a href="project.php">Projets</a></li>
+                    <li><a href="contact.php">Contact</a></li>
+                </ul>
+            </div>
+            
+            <!-- TROISIÈME COLONNE : SERVICES OFFERTS -->
+            <div class="footer-projects-section">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Développement Frontend</a></li>
+                    <li><a href="#">Développement Backend</a></li>
+                    <li><a href="#">Sites E-commerce</a></li>
+                    <li><a href="#">Applications Web</a></li>
+                    <li><a href="#">Refonte de sites</a></li>
+                </ul>
+            </div>
+            
+            <!-- QUATRIÈME COLONNE : COORDONNÉES ET RÉSEAUX SOCIAUX -->
+            <div class="footer-projects-section footer-projects-contact-info">
+                <h3>Contact</h3>
+                <div class="projects-contact-info">
+                    <div class="projects-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>exauceaniti@gmail.com</span>
+                    </div>
+                    <div class="projects-contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+243 820 853 461</span>
+                    </div>
+                    <div class="projects-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>RDC, Butembo, Kalemire</span>
+                    </div>
+                </div>
+                
+                <div class="projects-social-links">
+                    <a href="https://wa.me/243820853461" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:exauce.aniti@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.facebook.com/exauce.aniti" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://github.com/exauceaniti" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/exauce-aniti" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- BARRE DE BAS DE PAGE : DROITS D'AUTEUR -->
+        <div class="footer-projects-bottom">
+            <div class="footer-projects-bottom-content">
+                <p>&copy; 2025 Exaucé Aniti. Tous droits réservés.</p>
+                <div class="projects-legal-links">
+                    <a href="#">Politique de confidentialité</a>
+                    <a href="#">Conditions d'utilisation</a>
+                    <a href="#">Mentions légales</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
     <script src="scripts/main.js"></script>
+    <script src="scripts/projects.js"></script>
 </body>
 </html>

@@ -65,4 +65,18 @@ document.addEventListener('DOMContentLoaded', function() {
         `;
         document.head.appendChild(style);
     }
+    
+    // Animation pour le bouton de contact dans le footer
+    const contactBtn = document.querySelector('.btn-contact');
+    if (contactBtn) {
+        contactBtn.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-3px)';
+            this.style.boxShadow = '0 6px 20px rgba(0, 0, 0, 0.3)';
+        });
+        
+        contactBtn.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+            this.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.2)';
+        });
+    }
 });

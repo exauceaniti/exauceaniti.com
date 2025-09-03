@@ -4,108 +4,206 @@
  */
 
 /* Section principale des projets */
-/* Espacement vertical important pour aérer la section */
 .projects-section {
-    padding: 4rem 0;
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+/* Effet de motif géométrique subtil en arrière-plan */
+.projects-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 15% 50%, rgba(52, 152, 219, 0.05) 0%, transparent 25%),
+        radial-gradient(circle at 85% 30%, rgba(46, 204, 113, 0.05) 0%, transparent 25%),
+        linear-gradient(45deg, transparent 49%, rgba(241, 196, 15, 0.03) 50%, transparent 51%);
+    background-size: 100% 100%, 100% 100%, 30px 30px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Conteneur principal */
+.projects-section .container {
+    position: relative;
+    z-index: 2;
 }
 
 /* Titre principal de la section */
-/* Centrage du texte */
-/* Espacement important en dessous du titre */
-/* Couleur de texte sombre pour un bon contraste */
 .projects-section h1 {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
     color: #2c3e50;
+    font-size: 3rem;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+/* Ligne décorative sous le titre */
+.projects-section h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #3498db, #2ecc71);
+    border-radius: 2px;
 }
 
 /* Grille des projets */
-/* Affichage en grille CSS pour une disposition responsive */
-/* Crée des colonnes qui s'adaptent automatiquement avec une largeur minimale */
-/* Espacement entre les éléments de la grille */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2.5rem;
+    padding: 0 1rem;
 }
 
 /* Carte individuelle de projet */
-/* Fond blanc pour faire ressortir la carte */
-/* Coins arrondis pour un design moderne */
-/* Cache tout débordement pour les images */
-/* Ombre légère pour donner de la profondeur */
-/* Transition fluide pour les transformations et ombres */
 .project-card {
-    background: white;
-    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 
+        0 10px 30px rgba(0, 0, 0, 0.1),
+        0 1px 8px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+}
+
+/* Effet de brillance au survol */
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent,
+        rgba(255, 255, 255, 0.1),
+        transparent
+    );
+    transform: rotate(45deg);
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.project-card:hover::before {
+    animation: shine 1.5s forwards;
+}
+
+@keyframes shine {
+    0% {
+        opacity: 0;
+        top: -50%;
+        left: -50%;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        top: 100%;
+        left: 100%;
+    }
 }
 
 /* Effet au survol d'une carte de projet */
-/* Légère élévation vers le haut */
-/* Ombre plus prononcée pour accentuer l'élévation */
 .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.15),
+        0 5px 15px rgba(0, 0, 0, 0.07);
 }
 
 /* Conteneur de l'image du projet */
-/* Hauteur fixe pour uniformiser l'affichage */
-/* Cache tout débordement d'image */
 .project-image {
-    height: 200px;
+    height: 220px;
     overflow: hidden;
+    position: relative;
 }
 
 /* Image du projet à l'intérieur du conteneur */
-/* Prend toute la largeur du conteneur */
-/* Prend toute la hauteur du conteneur */
-/* Ajuste l'image pour couvrir tout l'espace sans déformation */
-/* Transition fluide pour les transformations */
 .project-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s;
+    transition: transform 0.5s ease;
 }
 
 /* Effet de zoom sur l'image au survol de la carte */
-/* Légère augmentation d'échelle pour un effet dynamique */
 .project-card:hover .project-image img {
-    transform: scale(1.05);
+    transform: scale(1.1);
+}
+
+/* Overlay sur l'image au survol */
+.project-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        rgba(0, 0, 0, 0.1) 100%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-image::after {
+    opacity: 1;
 }
 
 /* Conteneur du contenu textuel du projet */
-/* Espacement interne pour séparer le texte des bords */
 .project-content {
-    padding: 1.5rem;
+    padding: 2rem;
 }
 
 /* Titre du projet */
-/* Couleur de texte sombre */
-/* Espacement en dessous */
 .project-content h3 {
     color: #2c3e50;
     margin-bottom: 1rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.project-content h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(90deg, #3498db, #2ecc71);
+    border-radius: 2px;
 }
 
 /* Description du projet */
-/* Couleur grise pour différenciation */
-/* Espacement en dessous */
-/* Hauteur de ligne confortable pour la lecture */
 .project-content p {
     color: #7f8c8d;
     margin-bottom: 1.5rem;
     line-height: 1.6;
+    font-size: 0.95rem;
 }
 
 /* Conteneur des technologies utilisées */
-/* Affichage flexible pour aligner les badges */
-/* Permet le retour à la ligne si nécessaire */
-/* Espacement entre les badges */
-/* Espacement en dessous */
 .technologies {
     display: flex;
     flex-wrap: wrap;
@@ -114,43 +212,525 @@
 }
 
 /* Badge de technologie individuel */
-/* Fond gris très clair */
-/* Couleur de texte sombre */
-/* Espacement interne */
-/* Coins arrondis pour la forme de badge */
-/* Taille de police réduite */
-/* Texte en gras */
 .technologies span {
-    background: #ecf0f1;
-    color: #2c3e50;
-    padding: 0.3rem 0.8rem;
+    background: linear-gradient(135deg, #3498db, #2ecc71);
+    color: white;
+    padding: 0.4rem 1rem;
     border-radius: 20px;
     font-size: 0.8rem;
-    font-weight: bold;
+    font-weight: 500;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.technologies span:hover {
+    transform: translateY(-2px);
 }
 
 /* Conteneur des liens de projet */
-/* Affichage flexible pour aligner les liens */
-/* Espacement entre les liens */
 .project-links {
     display: flex;
     gap: 1rem;
 }
 
 /* Lien individuel de projet */
-/* Couleur bleue pour indiquer un lien cliquable */
-/* Suppression du soulignement par défaut */
-/* Texte en gras */
-/* Transition fluide pour le changement de couleur */
 .project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     color: #3498db;
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    background: rgba(52, 152, 219, 0.1);
 }
 
 /* Effet au survol des liens de projet */
-/* Couleur bleue légèrement plus foncée */
 .project-link:hover {
-    color: #03436e;
+    color: white;
+    background: #3498db;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+/* Animation d'apparition des cartes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.project-card {
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+}
+
+/* Délais d'animation pour chaque carte */
+.project-card:nth-child(1) { animation-delay: 0.1s; }
+.project-card:nth-child(2) { animation-delay: 0.2s; }
+.project-card:nth-child(3) { animation-delay: 0.3s; }
+.project-card:nth-child(4) { animation-delay: 0.4s; }
+.project-card:nth-child(5) { animation-delay: 0.5s; }
+.project-card:nth-child(6) { animation-delay: 0.6s; }
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-section {
+        padding: 3rem 0;
+    }
+    
+    .projects-section h1 {
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0 0.5rem;
+    }
+    
+    .project-content {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-section h1 {
+        font-size: 2rem;
+    }
+    
+    .project-links {
+        flex-direction: column;
+    }
+    
+    .project-link {
+        justify-content: center;
+    }
+}
+
+/* Filtre optionnel pour les projets */
+.projects-filter {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.5rem 1.5rem;
+    border: none;
+    background: rgba(255, 255, 255, 0.8);
+    color: #2c3e50;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background: linear-gradient(135deg, #3498db, #2ecc71);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+/* ============================= */
+/* Pied de page spécifique aux projets */
+/* Styles pour le footer des pages de projets */
+/* ============================= */
+
+/* Conteneur principal du footer projets */
+.footer-projects {
+    background-color: #0a192f;
+    color: #ccd6f6;
+    padding: 4rem 0 2rem;
+    margin-top: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Effet de motif géométrique subtil en arrière-plan */
+.footer-projects::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 20% 30%, rgba(37, 99, 235, 0.05) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(6, 182, 212, 0.05) 0%, transparent 40%);
+    pointer-events: none;
+}
+
+/* Conteneur interne centré */
+.footer-projects .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* SECTION SUPÉRIEURE AVEC BOUTON DE CONTACT */
+.footer-projects-contact {
+    text-align: center;
+    padding: 3rem 0;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+.footer-projects-contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #ccd6f6;
+    font-weight: 600;
+}
+
+.footer-projects-contact p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+    color: #8892b0;
+}
+
+/* Bouton de contact spécifique aux projets */
+.btn-projects-contact {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    color: #64ffda;
+    padding: 1rem 2rem;
+    border: 1px solid #64ffda;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-projects-contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(100, 255, 218, 0.1);
+    transition: all 0.4s ease;
+    z-index: -1;
+}
+
+.btn-projects-contact:hover {
+    color: #0a192f;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(100, 255, 218, 0.2);
+}
+
+.btn-projects-contact:hover::before {
+    left: 0;
+    background: #64ffda;
+}
+
+.btn-projects-contact i {
+    margin-right: 0.8rem;
+    font-size: 1.2rem;
+}
+
+/* CONTENU PRINCIPAL DU FOOTER PROJETS */
+.footer-projects-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+/* Section à propos spécifique aux projets */
+.footer-projects-about h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+    color: #ccd6f6;
+    position: relative;
+    padding-bottom: 0.8rem;
+}
+
+.footer-projects-about h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background-color: #64ffda;
+}
+
+.footer-projects-about p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    color: #8892b0;
+}
+
+/* Bouton spécifique aux projets */
+.btn-projects {
+    display: inline-flex;
+    align-items: center;
+    background: transparent;
+    color: #64ffda;
+    padding: 0.8rem 1.5rem;
+    border: 1px solid #64ffda;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-projects::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(100, 255, 218, 0.1);
+    transition: all 0.4s ease;
+    z-index: -1;
+}
+
+.btn-projects:hover {
+    color: #0a192f;
+    transform: translateY(-2px);
+}
+
+.btn-projects:hover::before {
+    left: 0;
+    background: #64ffda;
+}
+
+/* Section de navigation spécifique aux projets */
+.footer-projects-section h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+    color: #ccd6f6;
+    position: relative;
+    padding-bottom: 0.8rem;
+}
+
+.footer-projects-section h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background-color: #64ffda;
+}
+
+/* Liste de navigation */
+.footer-projects-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-projects-section ul li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-projects-section ul li a {
+    color: #8892b0;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-projects-section ul li a:hover {
+    color: #64ffda;
+    transform: translateX(5px);
+}
+
+/* Section de contact spécifique aux projets */
+.footer-projects-contact-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+    color: #ccd6f6;
+    position: relative;
+    padding-bottom: 0.8rem;
+}
+
+.footer-projects-contact-info h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background-color: #64ffda;
+}
+
+/* Informations de contact */
+.projects-contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.projects-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.projects-contact-item i {
+    color: #64ffda;
+    width: 20px;
+    text-align: center;
+}
+
+.projects-contact-item span {
+    color: #8892b0;
+}
+
+/* Liens sociaux spécifiques aux projets */
+.projects-social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.projects-social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(100, 255, 218, 0.1);
+    border-radius: 50%;
+    color: #64ffda;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.projects-social-links a:hover {
+    background-color: rgba(100, 255, 218, 0.2);
+    transform: translateY(-3px);
+    border-color: #64ffda;
+}
+
+/* BAS DU FOOTER PROJETS */
+.footer-projects-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+.footer-projects-bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-projects-bottom p {
+    color: #8892b0;
+    margin: 0;
+}
+
+/* Liens légaux spécifiques aux projets */
+.projects-legal-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.projects-legal-links a {
+    color: #8892b0;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.projects-legal-links a:hover {
+    color: #64ffda;
+}
+
+/* Responsive pour le footer projets */
+@media (max-width: 968px) {
+    .footer-projects-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+    
+    .footer-projects-about {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-projects-contact h2 {
+        font-size: 2rem;
+    }
+    
+    .footer-projects-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .footer-projects-bottom-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .projects-legal-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .projects-social-links {
+        justify-content: center;
+    }
+}
+
+/* Animation d'apparition pour les éléments du footer */
+.footer-projects-section {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s forwards;
+}
+
+.footer-projects-section:nth-child(1) { animation-delay: 0.1s; }
+.footer-projects-section:nth-child(2) { animation-delay: 0.2s; }
+.footer-projects-section:nth-child(3) { animation-delay: 0.3s; }
+.footer-projects-section:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

@@ -126,7 +126,51 @@ $current_page = basename($_SERVER['PHP_SELF']);
         </div>
     </main>
 
-    <?php include 'includes/footer.php'; ?>
+    <!-- Footer intégré directement -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Exaucé Aniti</h3>
+                    <p>Développeur web passionné par la création d'expériences numériques exceptionnelles.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Liens rapides</h4>
+                    <ul>
+                        <li><a href="index.php">Accueil</a></li>
+                        <li><a href="about.php">À propos</a></li>
+                        <li><a href="portfolio.php">Portfolio</a></li>
+                        <li><a href="contact.php">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contactez-moi</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> exauceaniti@gmail.com</li>
+                        <li><i class="fas fa-phone"></i> +243 820 853 461</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Butembo, RDC</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Suivez-moi</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Exaucé Aniti. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const form = document.getElementById('contactForm');
@@ -135,7 +179,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
             // Animation de soumission
             form.addEventListener('submit', function() {
                 submitBtn.classList.add('loading');
-                submitBtn.innerHTML = '<i class="fas fa-circle-notch"></i> Envoi en cours...';
+                submitBtn.innerHTML = '<i class="fas fa-circle-notch fa-spin"></i> Envoi en cours...';
             });
             
             // Réinitialiser le bouton si la page est rechargée
