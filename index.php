@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="styles/cards.css">
     <link rel="stylesheet" href="styles/footer.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Intégration de Font Awesome pour les icônes -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
@@ -20,7 +19,7 @@
 <header class="header">
     <div class="container">
         <div class="logo">
-            <a href="index.php">Exaucé Aniti<span>Développeur Web</span></a>
+            <a href="#">Exaucé Aniti<span>Développeur Web</span></a>
         </div>
   
         <button class="menu-toggle" aria-label="Menu mobile">
@@ -33,8 +32,8 @@
             <ul>
                 <li><a href="index.php" class="active">Accueil</a></li>
                 <li><a href="about.php">À propos</a></li>
-                <li><a href="competences.php">Compétences</a></li>
                 <li><a href="formations.php">Formations</a></li>
+                <li><a href="competences.php">Compétences</a></li>
                 <li><a href="project.php">Projets</a></li>
                 <li><a href="contact.php">Contact</a></li>
             </ul>
@@ -96,6 +95,12 @@
                         </div>
                     </div>
                     <div class="skill-item">
+                        <span class="skill-name">Java</span>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="50%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
                         <span class="skill-name">MySQL</span>
                         <div class="skill-bar">
                             <div class="skill-progress" data-width="65%"></div>
@@ -145,12 +150,12 @@
                     <div class="placeholder-project"></div>
                 </div>
                 <div class="project-content">
-                    <h3 class="project-title">Portfolio Artistique</h3>
-                    <p class="project-description">Site vitrine pour un artiste avec galerie et gestion de contenu.</p>
+                    <h3 class="project-title">Portfolio Personnel</h3>
+                    <p class="project-description">Site vitrine pour montrer mes competence et mon savoir faire</p>
                     <div class="project-tech">
+                        <span>PHP</span>
                         <span>HTML/CSS</span>
                         <span>JavaScript</span>
-                        <span>PHP</span>
                     </div>
                     <a href="#" class="project-link">Voir le projet →</a>
                 </div>
@@ -178,15 +183,15 @@
                     <div class="placeholder-project"></div>
                 </div>
                 <div class="project-content">
-                    <h3 class="project-title">Project Maseka-Food</h3>
+                    <h3 class="project-title">Project E-commerce</h3>
                     <p class="project-description">Application responsive avec fonctionnalités avancées Pour la vente en ligne,
                         des pattisserie pour MasekaFood.</p>
                     <div class="project-tech">
                         <span>PHP</span>
                         <span>MySQL</span>
+                        <span>HTML</span>
                         <span>SCSS</span>
                         <span>JavaScript</span>
-                        <span>HTML</span>
                     </div>
                     <a href="#" class="project-link">Voir le projet →</a>
                 </div>
@@ -199,16 +204,54 @@
     </div>
 </section>
 
-<!-- NOUVEAU FOOTER AMÉLIORÉ -->
+<!-- PARTIE FOOTER AMÉLIORÉ AVEC SECTION DE CONTACT -->
 <footer class="footer">
     <div class="container">
+        <!-- SECTION SUPÉRIEURE : PROJET + FORMULAIRE -->
+        <div class="footer-top">
+            <div class="footer-project">
+                <h2>Parlons de votre projet</h2>
+                <p>Vous avez une idée de projet web ? Discutons-en ensemble pour la concrétiser. Remplissez le formulaire et je vous répondrai dans les plus brefs délais.</p>
+                <div class="project-info">
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>exauceaniti@gmail.com</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+243 820 853 461</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Réponse sous 24h</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-form">
+                <h3>Envoyez un message</h3>
+                <form action="process-form.php" method="POST" id="footer-contact-form">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Votre nom complet" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Votre adresse email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Décrivez votre projet..." rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-form">Envoyer le message</button>
+                </form>
+            </div>
+        </div>
+        
         <!-- CONTENEUR PRINCIPAL DU FOOTER -->
         <div class="footer-content">
-            
             <!-- PREMIÈRE COLONNE : DESCRIPTION ET APPEL À L'ACTION -->
             <div class="footer-section footer-about">
-                <h3>Prêt à concrétiser votre projet web ?</h3>
-                <p>Contactez-mous dès maintenant pour discuter de votre vision et voir comment nous pouvons la transformer en réalité numérique ensemble.</p>
+                <h3>Exaucé Aniti - Développeur Web</h3>
+                <p>Nous créons des expériences web modernes et fonctionnelles qui aident les entreprises à prospérer en ligne.
+                    Transformons vos idées en réalité numérique.</p>
                 <a href="contact.php" class="btn btn-footer">Démarrer un projet</a>
             </div>
             
@@ -218,6 +261,7 @@
                 <ul>
                     <li><a href="index.php">Accueil</a></li>
                     <li><a href="about.php">À propos</a></li>
+                    <li><a href="formations.php">Formations</a></li>
                     <li><a href="competences.php">Compétences</a></li>
                     <li><a href="project.php">Projets</a></li>
                     <li><a href="contact.php">Contact</a></li>
@@ -232,7 +276,7 @@
                     <li><a href="#">Développement Backend</a></li>
                     <li><a href="#">Sites E-commerce</a></li>
                     <li><a href="#">Applications Web</a></li>
-                    <li><a href="#">Refonte de sites</a></li>
+                    <li><a href="#">Refonte de sites vitrines</a></li>
                 </ul>
             </div>
             
@@ -262,16 +306,18 @@
                     <a href="https://www.linkedin.com/in/exauce-aniti" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
-            
         </div>
+        
         
         <!-- BARRE DE BAS DE PAGE : DROITS D'AUTEUR -->
         <div class="footer-bottom">
             <div class="footer-bottom-content">
-                <p>&copy; 2023 Exaucé Aniti. Tous droits réservés.</p>
+                <p>&copy; 2025 Exaucé Aniti. Tous droits réservés.</p>
                 <div class="legal-links">
                     <a href="#">Politique de confidentialité</a>
                     <a href="#">Conditions d'utilisation</a>
+                    <a href="#">Mentions légales</a>
+                    <a href="#">Cookies</a>
                 </div>
             </div>
         </div>

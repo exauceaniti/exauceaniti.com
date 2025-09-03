@@ -78,7 +78,7 @@
                         <div class="project-content">
                             <h3>Application de Gestion de Tâches</h3>
                             <p>Une application web responsive permettant de créer, organiser et suivre l'avancement des tâches quotidiennes.
-                               <strong>Mais elle est encore en cours de develloppement</strong> 
+                               <strong>Application en cours de develloppement</strong>
                             <div class="technologies">
                                 <span>HTML/CSS</span>
                                 <span>JavaScript</span>

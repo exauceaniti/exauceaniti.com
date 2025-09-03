@@ -3,8 +3,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Récupération des données du formulaire
     $name = htmlspecialchars(trim($_POST['name']));
     $email = htmlspecialchars(trim($_POST['email']));
-    $subject = htmlspecialchars(trim($_POST['subject']));
     $message = htmlspecialchars(trim($_POST['message']));
+    
+    // Gestion du sujet selon le formulaire
+    if (isset($_POST['subject'])) {
+        // Formulaire principal (avec sujet)
+        $subject = htmlspecialchars(trim($_POST['subject']));
+        $form_type = "Formulaire principal";
+        $redirect_page = "contact.php";
+    } else {
+        // Formulaire footer (sans sujet)
+        $subject = "Message depuis le formulaire footer";
+        $form_type = "Formulaire footer";
+        $redirect_page = "index.php";
+    }
     
     // Validation basique
     $errors = [];
@@ -17,10 +29,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $errors[] = "Une adresse email valide est requise.";
     }
     
-    if (empty($subject)) {
-        $errors[] = "Le sujet est requis.";
-    }
-    
     if (empty($message)) {
         $errors[] = "Le message est requis.";
     }
@@ -29,8 +37,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($errors)) {
         // Configuration de l'email
         $to = "exauceaniti@gmail.com";
-        $email_subject = "Nouveau message de contact: $subject";
+        $email_subject = "Nouveau message de contact ($form_type): $subject";
         $email_body = "Vous avez reçu un nouveau message de contact.\n\n".
+                      "Type: $form_type\n".
                       "Nom: $name\n".
                       "Email: $email\n".
                       "Sujet: $subject\n".
@@ -41,21 +50,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Envoi de l'email
         if (mail($to, $email_subject, $email_body, $headers)) {
             // Redirection en cas de succès
-            header('Location: contact.php?status=success');
+            header("Location: $redirect_page?status=success");
             exit;
         } else {
             // Redirection en cas d'erreur
-            header('Location: contact.php?status=error');
+            header("Location: $redirect_page?status=error");
             exit;
         }
     } else {
-        // Gestion des erreurs (vous pourriez sauvegarder les erreurs en session et les afficher)
-        header('Location: contact.php?status=error');
+        // Gestion des erreurs
+        header("Location: $redirect_page?status=error");
         exit;
     }
 } else {
     // Redirection si la page est accédée directement
-    header('Location: contact.php');
+    header('Location: index.php');
     exit;
 }
 ?>
