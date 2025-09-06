@@ -301,7 +301,7 @@
     </footer>
 
     <script src="scripts/main.js"></script>
-
+    <script src="scripts/theme.js"></script>
 </body>
 
 </html>

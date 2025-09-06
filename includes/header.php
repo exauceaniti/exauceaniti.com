@@ -20,11 +20,19 @@
                 <a href="index.php">Exaucé Aniti<span>Développeur Web</span></a>
             </div>
 
-            <button class="menu-toggle" aria-label="Menu mobile">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <div class="header-controls">
+                <button class="menu-toggle" aria-label="Menu mobile">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <!-- Bouton de changement de thème -->
+                <button class="theme-toggle" aria-label="Changer le thème">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+            </div>
 
             <nav class="nav">
                 <ul>
@@ -41,6 +49,10 @@
 
     <!-- Overlay pour le menu mobile -->
     <div class="menu-overlay"></div>
+
+
+
+
 
     <script>
         // Script pour le menu responsive
@@ -87,6 +99,7 @@
     </script>
 
     <script src="scripts/main.js"></script>
+    <script src="scripts/theme.js"></script>
 </body>
 
 </html>

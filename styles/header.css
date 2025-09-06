@@ -372,3 +372,198 @@
                 transition: none;
             }
         }
+
+
+
+
+        /* ============================= */
+/* BOUTON CHANGEMENT DE THÈME */
+/* ============================= */
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.theme-toggle {
+    background: rgba(100, 255, 218, 0.1);
+    border: 1px solid rgba(100, 255, 218, 0.3);
+    color: #64ffda;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    background: rgba(100, 255, 218, 0.2);
+    transform: translateY(-2px);
+}
+
+.theme-toggle i {
+    position: absolute;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.theme-toggle .fa-moon {
+    opacity: 1;
+    transform: rotate(0deg);
+}
+
+.theme-toggle .fa-sun {
+    opacity: 0;
+    transform: rotate(90deg);
+}
+
+/* État quand le thème clair est activé */
+body.light-theme .theme-toggle .fa-moon {
+    opacity: 0;
+    transform: rotate(-90deg);
+}
+
+body.light-theme .theme-toggle .fa-sun {
+    opacity: 1;
+    transform: rotate(0deg);
+}
+
+/* ============================= */
+/* STYLES DU THÈME CLAIR */
+/* ============================= */
+body.light-theme {
+    --dark-bg: #f0f0f0;
+    --light-text: #333333;
+    --accent-color: #0a192f;
+    --secondary-color: #666666;
+    --menu-bg: rgba(240, 240, 240, 0.95);
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    --overlay-color: rgba(0, 0, 0, 0.4);
+}
+
+body.light-theme .header {
+    background-color: rgba(240, 240, 240, 0.9);
+    border-bottom: 1px solid rgba(10, 25, 47, 0.1);
+}
+
+body.light-theme .logo a {
+    color: #0a192f;
+}
+
+body.light-theme .nav a {
+    color: #333333;
+}
+
+body.light-theme .nav a:hover,
+body.light-theme .nav a.active {
+    color: #0a192f;
+}
+
+body.light-theme .nav a.active::after {
+    background-color: #0a192f;
+}
+
+body.light-theme .nav a:not(.active)::after {
+    background-color: #0a192f;
+}
+
+body.light-theme .category {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(10, 25, 47, 0.1);
+}
+
+body.light-theme .category h2 {
+    color: #333333;
+    border-bottom: 2px solid #0a192f;
+}
+
+body.light-theme .skill-info span:first-child {
+    color: #333333;
+}
+
+body.light-theme .footer-projects {
+    background-color: #f0f0f0;
+    color: #333333;
+}
+
+body.light-theme .footer-projects-contact h2 {
+    color: #333333;
+}
+
+body.light-theme .footer-projects-contact p {
+    color: #666666;
+}
+
+body.light-theme .btn-projects-contact {
+    color: #0a192f;
+    border: 1px solid #0a192f;
+}
+
+body.light-theme .btn-projects-contact:hover {
+    color: #f0f0f0;
+    background: #0a192f;
+}
+
+body.light-theme .footer-projects-section h3 {
+    color: #333333;
+}
+
+body.light-theme .footer-projects-section ul li a {
+    color: #666666;
+}
+
+body.light-theme .footer-projects-section ul li a:hover {
+    color: #0a192f;
+}
+
+body.light-theme .projects-contact-item span {
+    color: #666666;
+}
+
+body.light-theme .projects-social-links a {
+    background-color: rgba(10, 25, 47, 0.1);
+    color: #0a192f;
+    border: 1px solid transparent;
+}
+
+body.light-theme .projects-social-links a:hover {
+    background-color: rgba(10, 25, 47, 0.2);
+    border-color: #0a192f;
+}
+
+body.light-theme .footer-projects-bottom p {
+    color: #666666;
+}
+
+body.light-theme .projects-legal-links a {
+    color: #666666;
+}
+
+body.light-theme .projects-legal-links a:hover {
+    color: #0a192f;
+}
+
+/* Ajustements pour la barre de compétences en thème clair */
+body.light-theme .skill-bar {
+    background: rgba(136, 146, 176, 0.3);
+}
+
+body.light-theme .skill-progress {
+    background: linear-gradient(90deg, #0a192f 0%, rgba(10, 25, 47, 0.7) 100%);
+}
+
+/* Responsive pour le bouton de thème */
+@media (max-width: 768px) {
+    .theme-toggle {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+        background: rgba(100, 255, 218, 0.2);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+    }
+}
