@@ -1,25 +1,43 @@
-// scripts/theme.js
-
-// Gestion du changement de thème
 document.addEventListener('DOMContentLoaded', function() {
-    const themeToggle = document.querySelector('.theme-toggle');
+    const toggleSwitch = document.querySelector('.theme-toggle');
     const body = document.body;
     
-    // Vérifier si un thème est déjà sauvegardé
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-        body.classList.add(savedTheme);
+    // Vérifier le thème précédemment sélectionné
+    const currentTheme = localStorage.getItem('theme') || 'dark';
+    
+    // Appliquer le thème sauvegardé
+    if (currentTheme === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+    } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
     }
     
-    // Gérer le clic sur le bouton de thème
-    if (themeToggle) {
-        themeToggle.addEventListener('click', function() {
-            if (body.classList.contains('light-theme')) {
-                body.classList.remove('light-theme');
-                localStorage.setItem('theme', '');
-            } else {
-                body.classList.add('light-theme');
-                localStorage.setItem('theme', 'light-theme');
+    // Fonction de changement de thème
+    function switchTheme() {
+        if (document.documentElement.getAttribute('data-theme') === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light');
+        } else {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+        }
+    }
+    
+    // Événement sur le bouton de changement de thème
+    if (toggleSwitch) {
+        toggleSwitch.addEventListener('click', switchTheme);
+    }
+    
+    // Détection du thème système
+    if (currentTheme === 'system' || !currentTheme) {
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+            document.documentElement.setAttribute('data-theme', 'light');
+        }
+        
+        // Écouter les changements de préférence système
+        window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', e => {
+            if (!localStorage.getItem('theme') || localStorage.getItem('theme') === 'system') {
+                document.documentElement.setAttribute('data-theme', e.matches ? 'light' : 'dark');
             }
         });
     }

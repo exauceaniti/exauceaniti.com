@@ -1,39 +1,37 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Header PHP Stylisé - Exaucé Aniti</title>
+    <title>Exaucé Aniti - Développeur Web</title>
+
+    <!-- Chargement des polices et icônes -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <!-- Chargement des feuilles de style -->
+    <link rel="stylesheet" href="styles/theme-variables.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/header.css">
 </head>
 
 <body>
-    <!-- Header PHP -->
     <?php
+    // Détermination de la page active pour la navigation
     $current_page = basename($_SERVER['PHP_SELF']);
     ?>
+
+    <!-- Header principal -->
     <header class="header">
         <div class="container">
+            <!-- Logo -->
             <div class="logo">
-                <a href="index.php">Exaucé Aniti<span>Développeur Web</span></a>
+                <a href="index.php">
+                    Exaucé Aniti<span>Développeur Web</span>
+                </a>
             </div>
 
-            <div class="header-controls">
-                <button class="menu-toggle" aria-label="Menu mobile">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-
-                <!-- Bouton de changement de thème -->
-                <button class="theme-toggle" aria-label="Changer le thème">
-                    <i class="fas fa-moon"></i>
-                    <i class="fas fa-sun"></i>
-                </button>
-            </div>
-
+            <!-- Navigation principale -->
             <nav class="nav">
                 <ul>
                     <li><a href="index.php" class="<?= ($current_page == 'index.php') ? 'active' : '' ?>">Accueil</a></li>
@@ -44,62 +42,24 @@
                     <li><a href="contact.php" class="<?= ($current_page == 'contact.php') ? 'active' : '' ?>">Contact</a></li>
                 </ul>
             </nav>
+
+            <!-- Contrôles du header (bouton thème à droite) -->
+            <div class="header-controls">
+                <!-- Bouton de changement de thème -->
+                <button class="theme-toggle" aria-label="Changer le thème" title="Changer le thème">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </button>
+
+                <!-- Bouton menu mobile -->
+                <button class="menu-toggle" aria-label="Menu mobile">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </header>
 
     <!-- Overlay pour le menu mobile -->
     <div class="menu-overlay"></div>
-
-
-
-
-
-    <script>
-        // Script pour le menu responsive
-        document.addEventListener('DOMContentLoaded', function() {
-            const menuToggle = document.querySelector('.menu-toggle');
-            const nav = document.querySelector('.nav');
-            const overlay = document.querySelector('.menu-overlay');
-
-            if (menuToggle) {
-                menuToggle.addEventListener('click', function() {
-                    nav.classList.toggle('active');
-                    menuToggle.classList.toggle('active');
-                    overlay.classList.toggle('active');
-                });
-            }
-
-            // Fermer le menu en cliquant sur l'overlay
-            overlay.addEventListener('click', function() {
-                nav.classList.remove('active');
-                menuToggle.classList.remove('active');
-                overlay.classList.remove('active');
-            });
-
-            // Effet de réduction du header au scroll
-            window.addEventListener('scroll', function() {
-                const header = document.querySelector('.header');
-                if (window.scrollY > 50) {
-                    header.classList.add('scrolled');
-                } else {
-                    header.classList.remove('scrolled');
-                }
-            });
-
-            // Fermer le menu en cliquant sur un lien
-            const navLinks = document.querySelectorAll('.nav a');
-            navLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    nav.classList.remove('active');
-                    menuToggle.classList.remove('active');
-                    overlay.classList.remove('active');
-                });
-            });
-        });
-    </script>
-
-    <script src="scripts/main.js"></script>
-    <script src="scripts/theme.js"></script>
-</body>
-
-</html>

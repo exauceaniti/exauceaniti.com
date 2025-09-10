@@ -1,16 +1,20 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exaucé Aniti - Développeur Web</title>
 
+    <!-- Chargement des feuilles de style -->
+    <link rel="stylesheet" href="styles/theme-variables.css">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/home.css">
     <link rel="stylesheet" href="styles/cards.css">
     <link rel="stylesheet" href="styles/footer.css">
+
+    <!-- Polices et icônes -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -19,175 +23,182 @@
     <?php include 'includes/header.php'; ?>
     <div class="menu-overlay"></div>
 
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Développeur Web<span class="accent">Créatif & Passionné</span></h1>
-                <p class="hero-description">Je conçois et développe des expériences web modernes, fonctionnelles et esthétiques qui marquent les esprits.</p>
-                <div class="hero-actions">
-                    <a href="project.php" class="btn btn-primary">Voir mes projets</a>
-                    <a href="contact.php" class="btn btn-secondary">Me contacter</a>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Développeur Web<span class="accent">Créatif & Passionné</span></h1>
+                    <p class="hero-description">Je conçois et développe des expériences web modernes, fonctionnelles et esthétiques qui marquent les esprits.</p>
+                    <div class="hero-actions">
+                        <a href="project.php" class="btn btn-primary">Voir mes projets</a>
+                        <a href="contact.php" class="btn btn-secondary">Me contacter</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <img src="images/photo.png" alt="Exaucé Aniti - Développeur Web" class="hero-image">
                 </div>
             </div>
-            <div class="hero-visual">
-                <img src="images/photo.png" alt="Exaucé Aniti - Développeur Web" class="hero-image">
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="section skills">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Compétences Techniques</h2>
-                <p class="section-subtitle">Un éventail de technologies maîtrisées pour répondre à vos besoins</p>
-            </div>
-
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Frontend</h3>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <span class="skill-name">HTML/CSS</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="75%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">JavaScript</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="30%"></div>
-                            </div>
-                        </div>
-                    </div>
+        <section class="section skills">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Compétences Techniques</h2>
+                    <p class="section-subtitle">Un éventail de technologies maîtrisées pour répondre à vos besoins</p>
                 </div>
 
-                <div class="skill-category">
-                    <h3>Backend</h3>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <span class="skill-name">PHP</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="68%"></div>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Frontend</h3>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <span class="skill-name">HTML/CSS</span>
+                                <span class="skill-percentage">75%</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="75%"></div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Java</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="50%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">MySQL</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="65%"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3>Outils & autres</h3>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <span class="skill-name">Git</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="60%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">GitHub</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="60%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">VsCode</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-width="90%"></div>
+                            <div class="skill-item">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-percentage">30%</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="30%"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section class="section projects">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Projets Récents</h2>
-                <p class="section-subtitle">Une sélection de mes réalisations les plus significatives</p>
-            </div>
-
-            <div class="projects-grid">
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="placeholder-project"></div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Portfolio Personnel</h3>
-                        <p class="project-description">Site vitrine pour montrer mes competence et mon savoir faire</p>
-                        <div class="project-tech">
-                            <span>PHP</span>
-                            <span>HTML/CSS</span>
-                            <span>JavaScript</span>
+                    <div class="skill-category">
+                        <h3>Backend</h3>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <span class="skill-name">PHP</span>
+                                <span class="skill-percentage">68%</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="68%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Java</span>
+                                <span class="skill-percentage">50%</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="50%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">MySQL</span>
+                                <span class="skill-percentage">65%</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="65%"></div>
+                                </div>
+                            </div>
                         </div>
-                        <a href="#" class="project-link">Voir le projet →</a>
                     </div>
-                </div>
 
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="placeholder-project"></div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Application Gestion Contact Project Back2</h3>
-                        <p class="project-description"> Cette Plateforme est encore en cours de develloppement.</p>
-                        <div class="project-tech">
-                            <span>Java</span>
-                            <span>Swing</span>
-                            <span>MySQL</span>
+                    <div class="skill-category">
+                        <h3>Outils & autres</h3>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <span class="skill-name">Git</span>
+                                <span class="skill-percentage">60%</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="60%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">GitHub</span>
+                                <span class="skill-percentage">60%</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="60%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">VsCode</span>
+                                <span class="skill-percentage">90%</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90%"></div>
+                                </div>
+                            </div>
                         </div>
-                        <a href="#" class="project-link">Voir le projet →</a>
-                    </div>
-                </div>
-
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="placeholder-project"></div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Project E-commerce</h3>
-                        <p class="project-description">Application responsive avec fonctionnalités avancées Pour la vente en ligne,
-                            des pattisserie pour MasekaFood.</p>
-                        <div class="project-tech">
-                            <span>PHP</span>
-                            <span>MySQL</span>
-                            <span>HTML</span>
-                            <span>SCSS</span>
-                            <span>JavaScript</span>
-                        </div>
-                        <a href="#" class="project-link">Voir le projet →</a>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="section-actions">
-                <a href="project.php" class="btn btn-outline">Voir tous les projets</a>
+        <section class="section projects">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Projets Récents</h2>
+                    <p class="section-subtitle">Une sélection de mes réalisations les plus significatives</p>
+                </div>
+
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Portfolio Personnel</h3>
+                            <p class="project-description">Site vitrine pour montrer mes compétences et mon savoir-faire</p>
+                            <div class="project-tech">
+                                <span>PHP</span>
+                                <span>HTML/CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <a href="#" class="project-link">Voir le projet →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-address-book"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Gestion de Contacts</h3>
+                            <p class="project-description">Application de gestion de contacts avec interface graphique</p>
+                            <div class="project-tech">
+                                <span>Java</span>
+                                <span>Swing</span>
+                                <span>MySQL</span>
+                            </div>
+                            <a href="#" class="project-link">Voir le projet →</a>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">E-commerce MasekaFood</h3>
+                            <p class="project-description">Plateforme e-commerce pour la vente de pâtisseries en ligne</p>
+                            <div class="project-tech">
+                                <span>PHP</span>
+                                <span>MySQL</span>
+                                <span>HTML</span>
+                                <span>SCSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <a href="#" class="project-link">Voir le projet →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-actions">
+                    <a href="project.php" class="btn btn-outline">Voir tous les projets</a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- PARTIE FOOTER AMÉLIORÉ AVEC SECTION DE CONTACT -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <!-- SECTION SUPÉRIEURE : PROJET + FORMULAIRE -->
             <div class="footer-top">
                 <div class="footer-project">
                     <h2>Parlons de votre projet</h2>
-                    <p>Vous avez une idée de projet web ? Discutons-en ensemble pour la concrétiser. Remplissez le formulaire et je vous répondrai dans les plus brefs délais.</p>
+                    <p>Vous avez une idée de projet web ? Discutons-en ensemble pour la concrétiser.</p>
                     <div class="project-info">
                         <div class="info-item">
                             <i class="fas fa-envelope"></i>
@@ -216,7 +227,7 @@
                         <div class="form-group">
                             <textarea name="message" placeholder="Décrivez votre projet..." rows="4" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-form">Envoyer le message</button>
+                        <button type="submit" class="btn btn-primary">Envoyer le message</button>
                     </form>
                 </div>
             </div>
@@ -226,9 +237,8 @@
                 <!-- PREMIÈRE COLONNE : DESCRIPTION ET APPEL À L'ACTION -->
                 <div class="footer-section footer-about">
                     <h3>Exaucé Aniti - Développeur Web</h3>
-                    <p>Nous créons des expériences web modernes et fonctionnelles qui aident les entreprises à prospérer en ligne.
-                        Transformons vos idées en réalité numérique.</p>
-                    <a href="contact.php" class="btn btn-footer">Démarrer un projet</a>
+                    <p>Je crée des expériences web modernes et fonctionnelles qui aident les entreprises à prospérer en ligne.</p>
+                    <a href="contact.php" class="btn btn-outline">Démarrer un projet</a>
                 </div>
 
                 <!-- DEUXIÈME COLONNE : LIENS DE NAVIGATION RAPIDE -->
@@ -252,7 +262,7 @@
                         <li><a href="#">Développement Backend</a></li>
                         <li><a href="#">Sites E-commerce</a></li>
                         <li><a href="#">Applications Web</a></li>
-                        <li><a href="#">Refonte de sites vitrines</a></li>
+                        <li><a href="#">Refonte de sites</a></li>
                     </ul>
                 </div>
 
@@ -284,7 +294,6 @@
                 </div>
             </div>
 
-
             <!-- BARRE DE BAS DE PAGE : DROITS D'AUTEUR -->
             <div class="footer-bottom">
                 <div class="footer-bottom-content">
@@ -293,7 +302,6 @@
                         <a href="#">Politique de confidentialité</a>
                         <a href="#">Conditions d'utilisation</a>
                         <a href="#">Mentions légales</a>
-                        <a href="#">Cookies</a>
                     </div>
                 </div>
             </div>
