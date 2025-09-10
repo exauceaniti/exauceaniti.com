@@ -6,23 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exaucé Aniti - Développeur Web</title>
 
-    <!-- Chargement des feuilles de style -->
-    <link rel="stylesheet" href="styles/theme-variables.css">
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/home.css">
-    <link rel="stylesheet" href="styles/cards.css">
-    <link rel="stylesheet" href="styles/footer.css">
-
     <!-- Polices et icônes -->
+    <link rel="stylesheet" href="styles/home.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 </head>
 
 <body>
+    <!-- Header -->
     <?php include 'includes/header.php'; ?>
-    <div class="menu-overlay"></div>
-
+    <!-- Main Content -->
     <main>
         <section class="hero">
             <div class="container">
@@ -44,87 +38,109 @@
             <div class="container">
                 <div class="section-header">
                     <h2 class="section-title">Compétences Techniques</h2>
-                    <p class="section-subtitle">Un éventail de technologies maîtrisées pour répondre à vos besoins</p>
+                    <p class="section-subtitle">
+                        Un éventail de technologies maîtrisées pour répondre à vos besoins
+                    </p>
                 </div>
 
                 <div class="skills-grid">
+                    <!-- FRONTEND -->
                     <div class="skill-category">
                         <h3>Frontend</h3>
-                        <div class="skills-list">
-                            <div class="skill-item">
-                                <span class="skill-name">HTML/CSS</span>
-                                <span class="skill-percentage">75%</span>
+                        <ul class="skills-list">
+                            <li class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">HTML / CSS</span>
+                                    <span class="skill-percentage">75%</span>
+                                </div>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-width="75%"></div>
                                 </div>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">JavaScript</span>
-                                <span class="skill-percentage">30%</span>
+                            </li>
+                            <li class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">JavaScript</span>
+                                    <span class="skill-percentage">30%</span>
+                                </div>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-width="30%"></div>
                                 </div>
-                            </div>
-                        </div>
+                            </li>
+                        </ul>
                     </div>
 
+                    <!-- BACKEND -->
                     <div class="skill-category">
                         <h3>Backend</h3>
-                        <div class="skills-list">
-                            <div class="skill-item">
-                                <span class="skill-name">PHP</span>
-                                <span class="skill-percentage">68%</span>
+                        <ul class="skills-list">
+                            <li class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">PHP</span>
+                                    <span class="skill-percentage">68%</span>
+                                </div>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-width="68%"></div>
                                 </div>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">Java</span>
-                                <span class="skill-percentage">50%</span>
+                            </li>
+                            <li class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">Java</span>
+                                    <span class="skill-percentage">50%</span>
+                                </div>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-width="50%"></div>
                                 </div>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">MySQL</span>
-                                <span class="skill-percentage">65%</span>
+                            </li>
+                            <li class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">MySQL</span>
+                                    <span class="skill-percentage">65%</span>
+                                </div>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-width="65%"></div>
                                 </div>
-                            </div>
-                        </div>
+                            </li>
+                        </ul>
                     </div>
 
+                    <!-- OUTILS -->
                     <div class="skill-category">
-                        <h3>Outils & autres</h3>
-                        <div class="skills-list">
-                            <div class="skill-item">
-                                <span class="skill-name">Git</span>
-                                <span class="skill-percentage">60%</span>
+                        <h3>Outils & Autres</h3>
+                        <ul class="skills-list">
+                            <li class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">Git</span>
+                                    <span class="skill-percentage">60%</span>
+                                </div>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-width="60%"></div>
                                 </div>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">GitHub</span>
-                                <span class="skill-percentage">60%</span>
+                            </li>
+                            <li class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">GitHub</span>
+                                    <span class="skill-percentage">60%</span>
+                                </div>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-width="60%"></div>
                                 </div>
-                            </div>
-                            <div class="skill-item">
-                                <span class="skill-name">VsCode</span>
-                                <span class="skill-percentage">90%</span>
+                            </li>
+                            <li class="skill-item">
+                                <div class="skill-header">
+                                    <span class="skill-name">VS Code</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-width="90%"></div>
                                 </div>
-                            </div>
-                        </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- PROJETS RÉCENTS -->
         <section class="section projects">
             <div class="container">
                 <div class="section-header">
