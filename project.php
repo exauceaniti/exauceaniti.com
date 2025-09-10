@@ -209,6 +209,7 @@
         </div>
     </footer>
     <script src="scripts/main.js"></script>
+    <script src="scripts/theme.js"></script>
     <script src="scripts/projects.js"></script>
 </body>
 

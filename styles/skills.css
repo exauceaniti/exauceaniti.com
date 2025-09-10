@@ -627,3 +627,142 @@
             from { width: 0; }
             to { width: attr(data-width); }
         }
+
+
+        /* ============================= */
+/* SKILLS - MODE CLAIR           */
+/* ============================= */
+
+[data-theme="light"] .skills-section {
+    background-color: #f9fafb; /* fond clair */
+    color: #1f2937; /* texte sombre */
+}
+
+[data-theme="light"] .skills-section h1 {
+    color: #111827;
+}
+
+[data-theme="light"] .skills-section h1::after {
+    background: #4f46e5;
+}
+
+[data-theme="light"] .category {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .category h2 {
+    color: #4f46e5;
+    border-bottom: 2px solid #4f46e5;
+}
+
+[data-theme="light"] .skill-info span:first-child {
+    color: #1f2937;
+}
+
+[data-theme="light"] .skill-info span:last-child {
+    color: #6b7280;
+}
+
+[data-theme="light"] .skill-bar {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .skill-progress {
+    background: linear-gradient(90deg, #4f46e5 0%, rgba(79, 70, 229, 0.7) 100%);
+}
+
+/* Animation au survol */
+[data-theme="light"] .skill-bar:hover .skill-progress {
+    transform: scaleY(1.2);
+    transform-origin: center;
+}
+
+/* ============================= */
+/* FOOTER PROJETS - MODE CLAIR   */
+/* ============================= */
+
+[data-theme="light"] .footer-projects {
+    background-color: #ffffff;
+    color: #1f2937;
+}
+
+[data-theme="light"] .footer-projects-contact h2 {
+    color: #111827;
+}
+
+[data-theme="light"] .footer-projects-contact p {
+    color: #374151;
+}
+
+[data-theme="light"] .btn-projects-contact {
+    color: #4f46e5;
+    border-color: #4f46e5;
+}
+
+[data-theme="light"] .btn-projects-contact:hover {
+    color: #ffffff;
+    background: #4f46e5;
+}
+
+[data-theme="light"] .footer-projects-section h3 {
+    color: #111827;
+}
+
+[data-theme="light"] .footer-projects-section h3::after {
+    background-color: #4f46e5;
+}
+
+[data-theme="light"] .footer-projects-section p {
+    color: #374151;
+}
+
+[data-theme="light"] .footer-projects-section ul li a {
+    color: #6b7280;
+}
+
+[data-theme="light"] .footer-projects-section ul li a:hover {
+    color: #4f46e5;
+}
+
+[data-theme="light"] .btn-projects {
+    color: #4f46e5;
+    border-color: #4f46e5;
+}
+
+[data-theme="light"] .btn-projects:hover {
+    color: #ffffff;
+    background: #4f46e5;
+}
+
+[data-theme="light"] .projects-contact-item i {
+    color: #4f46e5;
+}
+
+[data-theme="light"] .projects-contact-item span {
+    color: #374151;
+}
+
+[data-theme="light"] .projects-social-links a {
+    background-color: rgba(79, 70, 229, 0.1);
+    color: #4f46e5;
+}
+
+[data-theme="light"] .projects-social-links a:hover {
+    background-color: rgba(79, 70, 229, 0.2);
+    border-color: #4f46e5;
+}
+
+[data-theme="light"] .footer-projects-bottom {
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .footer-projects-bottom p,
+[data-theme="light"] .projects-legal-links a {
+    color: #6b7280;
+}
+
+[data-theme="light"] .projects-legal-links a:hover {
+    color: #4f46e5;
+}

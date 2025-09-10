@@ -695,3 +695,188 @@
     }
 }
 
+/*Integrations de mode claire et sombres dans le site*/
+
+/* ============================= */
+/* FORMATIONS - MODE CLAIR */
+/* ============================= */
+
+[data-theme="light"] .formations-section {
+    background-color: #f9fafb;
+    background-image: 
+        radial-gradient(circle at 20% 30%, rgba(74, 108, 247, 0.05) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(16, 185, 129, 0.05) 0%, transparent 40%);
+    color: #1f2937;
+}
+
+[data-theme="light"] .formations-section h1 {
+    color: #111827;
+}
+
+[data-theme="light"] .formations-section h1::after {
+    background: #4f46e5;
+}
+
+[data-theme="light"] .timeline::before {
+    background: rgba(79, 70, 229, 0.3);
+}
+
+[data-theme="light"] .timeline-date {
+    background: rgba(79, 70, 229, 0.08);
+    color: #4f46e5;
+    border: 1px solid rgba(79, 70, 229, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .timeline-content {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .timeline-content h3 {
+    color: #4f46e5;
+}
+
+[data-theme="light"] .timeline-content h3::after {
+    background: #4f46e5;
+}
+
+[data-theme="light"] .timeline-content h4 {
+    color: #1f2937;
+}
+
+[data-theme="light"] .timeline-content p {
+    color: #374151;
+}
+
+[data-theme="light"] .lien {
+    color: #4f46e5;
+    border-bottom: 1px dotted rgba(79, 70, 229, 0.3);
+}
+
+[data-theme="light"] .lien:hover {
+    color: #1f2937;
+    border-bottom-color: #4f46e5;
+}
+
+/* Certifications */
+[data-theme="light"] .certifications-title {
+    color: #111827;
+}
+
+[data-theme="light"] .certifications-title::after {
+    background: #4f46e5;
+}
+
+[data-theme="light"] .certification-card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .certification-card h3 {
+    color: #4f46e5;
+}
+
+[data-theme="light"] .certification-card h4 {
+    color: #1f2937;
+}
+
+/* ============================= */
+/* FOOTER PROJETS - MODE CLAIR */
+/* ============================= */
+
+[data-theme="light"] .footer-projects {
+    background-color: #ffffff;
+    color: #1f2937;
+}
+
+[data-theme="light"] .footer-projects::before {
+    background-image: 
+        radial-gradient(circle at 20% 30%, rgba(74, 108, 247, 0.05) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(16, 185, 129, 0.05) 0%, transparent 40%);
+}
+
+[data-theme="light"] .footer-projects-contact h2 {
+    color: #111827;
+}
+
+[data-theme="light"] .footer-projects-contact p {
+    color: #374151;
+}
+
+[data-theme="light"] .btn-projects-contact {
+    color: #4f46e5;
+    border-color: #4f46e5;
+}
+
+[data-theme="light"] .btn-projects-contact:hover {
+    color: #ffffff;
+    background: #4f46e5;
+}
+
+/* Footer content */
+[data-theme="light"] .footer-projects-section h3 {
+    color: #111827;
+}
+
+[data-theme="light"] .footer-projects-section h3::after {
+    background-color: #4f46e5;
+}
+
+[data-theme="light"] .footer-projects-section p {
+    color: #374151;
+}
+
+[data-theme="light"] .footer-projects-section ul li a {
+    color: #6b7280;
+}
+
+[data-theme="light"] .footer-projects-section ul li a:hover {
+    color: #4f46e5;
+}
+
+/* Bouton spécifique projets */
+[data-theme="light"] .btn-projects {
+    color: #4f46e5;
+    border-color: #4f46e5;
+}
+
+[data-theme="light"] .btn-projects:hover {
+    color: #ffffff;
+    background: #4f46e5;
+}
+
+/* Contact */
+[data-theme="light"] .projects-contact-item i {
+    color: #4f46e5;
+}
+
+[data-theme="light"] .projects-contact-item span {
+    color: #374151;
+}
+
+[data-theme="light"] .projects-social-links a {
+    background-color: rgba(79, 70, 229, 0.1);
+    color: #4f46e5;
+}
+
+[data-theme="light"] .projects-social-links a:hover {
+    background-color: rgba(79, 70, 229, 0.2);
+    border-color: #4f46e5;
+}
+
+/* Bottom footer */
+[data-theme="light"] .footer-projects-bottom {
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .footer-projects-bottom p,
+[data-theme="light"] .projects-legal-links a {
+    color: #6b7280;
+}
+
+[data-theme="light"] .projects-legal-links a:hover {
+    color: #4f46e5;
+}
