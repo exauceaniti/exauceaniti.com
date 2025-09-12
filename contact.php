@@ -18,13 +18,12 @@ $current_page = basename($_SERVER['PHP_SELF']);
 
 <body>
     <?php include 'includes/header.php'; ?>
-    <?php include 'includes/navigation.php'; ?>
 
     <main class="main-content">
         <div class="contact-container">
             <div class="section-header">
                 <h1>Contactez-moi</h1>
-                <p>N'hésitez pas à me contacter pour discuter de projets, opportunités ou simplement pour échanger.</p>
+                <p>N'hésitez pas à me contacter pour discuter de projets, opportunités ou simplement pour échanger vos idees.</p>
             </div>
 
             <?php if (isset($_GET['status']) && $_GET['status'] == 'success'): ?>

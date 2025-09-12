@@ -116,7 +116,7 @@
         /* ============================= */
         .main-content {
             flex: 1;
-            padding: 4rem 0;
+            background: var(--main-bg, #0a192f);
         }
 
         .skills-section {
