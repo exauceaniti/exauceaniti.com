@@ -84,14 +84,6 @@ Ouvrez votre navigateur et accédez à :
 
 <http://localhost:8080>
 
-## Déploiement sur un serveur web
-
-- Téléversez tous les fichiers sur votre serveur web
-- Assurez-vous que PHP est installé et activé
-- Le site devrait être accessible via votre domaine
-
-## Personnalisation
-
 ### Modifier les couleurs des thèmes
 
 Les variables CSS sont définies dans `styles/theme-variables.css` :
