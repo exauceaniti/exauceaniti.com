@@ -118,6 +118,6 @@ Les variables CSS sont définies dans `styles/theme-variables.css` :
 
 **Exauce Aniti**
 
-- Email : `exauceaniti@gmail.com`
+- Email : [exauceaniti@gmail.com](https://exauceaniti@gmail.com)
 - LinkedIn : [Exauce Aniti](https://linkedin.com/in/exauce-aniti)
 - Site web : [https://exauceaniti.com](https://exauceaniti.com)

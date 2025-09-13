@@ -14,6 +14,12 @@ $current_page = basename($_SERVER['PHP_SELF']);
             <i class="fas fa-bars"></i>
         </button>
 
+        <?php
+        // Inclure le fichier du compteur de vues
+        require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'functions' . DIRECTORY_SEPARATOR . 'compteur.php';
+        ajouter_une_vue();
+        ?>
+
         <!-- Navigation principale -->
         <nav>
             <ul class="nav-menu" id="navMenu">
