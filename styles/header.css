@@ -1,13 +1,14 @@
-/*
- * HEADER STYLES
- * Styles pour l'en-tête du site avec navigation responsive
- * et système de thème clair/sombre
- */
+/* ==========================================================================
+   HEADER STYLES
+   Styles pour l'en-tête du site avec navigation responsive
+   et système de thème clair/sombre
+   ========================================================================== */
 
-/* ===== IMPORTS ===== */
+/* ===== VARIABLES ET IMPORTS ===== */
 @import url('theme-variables.css');
 
 /* ===== RÉINITIALISATION ===== */
+/* Réinitialisation des styles par défaut pour une base cohérente */
 * {
     margin: 0;
     padding: 0;
@@ -31,6 +32,10 @@ body {
 }
 
 /* ===== HEADER PRINCIPAL ===== */
+/**
+ * Conteneur principal de l'en-tête
+ * Utilise un effet de flou d'arrière-plan pour un look moderne
+ */
 .header {
     background-color: var(--menu-bg);
     -webkit-backdrop-filter: blur(10px);
@@ -46,12 +51,12 @@ body {
     border-bottom: 1px solid var(--border-color);
 }
 
-/* Header réduit au défilement */
+/* Header réduit au défilement pour économiser l'espace */
 .header.scrolled {
     padding: 0.8rem 0;
 }
 
-/* Conteneur interne */
+/* Conteneur interne pour l'alignement des éléments */
 .header .container {
     display: flex;
     justify-content: space-between;
@@ -60,6 +65,9 @@ body {
 }
 
 /* ===== LOGO ===== */
+/**
+ * Style du logo avec effet d'interaction
+ */
 .logo {
     color: var(--accent-color);
     text-decoration: none;
@@ -74,7 +82,10 @@ body {
     transform: translateY(-1px);
 }
 
-/* ===== NAVIGATION ===== */
+/* ===== NAVIGATION PRINCIPALE ===== */
+/**
+ * Menu de navigation principal - version desktop
+ */
 .nav-menu {
     display: flex;
     list-style: none;
@@ -87,6 +98,7 @@ body {
     position: relative;
 }
 
+/* Style des liens de navigation */
 .nav-link {
     color: var(--text-primary);
     text-decoration: none;
@@ -98,13 +110,13 @@ body {
     display: block;
 }
 
-/* Effet hover et actif */
+/* Effet hover et état actif */
 .nav-link:hover,
 .nav-link.active {
     color: var(--accent-color);
 }
 
-/* Indicateur actif */
+/* Indicateur visuel pour la page active */
 .nav-link.active::after {
     content: '';
     position: absolute;
@@ -117,7 +129,11 @@ body {
     transition: transform 0.3s ease;
 }
 
-/* ===== BOUTON THEME ===== */
+/* ===== BOUTON CHANGEMENT DE THÈME ===== */
+/**
+ * Bouton pour alterner entre les modes clair/sombre
+ * Positionné dans la barre de navigation en desktop
+ */
 .theme-toggle {
     background: rgba(100, 255, 218, 0.1);
     border: 1px solid rgba(100, 255, 218, 0.3);
@@ -139,6 +155,7 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Gestion des icônes (lune/soleil) */
 .theme-toggle i {
     position: absolute;
     transition: opacity 0.3s ease, transform 0.3s ease;
@@ -155,7 +172,7 @@ body {
     transform: rotate(90deg);
 }
 
-/* État clair */
+/* Adaptation pour le mode clair */
 [data-theme="light"] .theme-toggle {
     background: rgba(74, 108, 247, 0.1);
     border: 1px solid rgba(74, 108, 247, 0.3);
@@ -175,7 +192,63 @@ body {
     transform: rotate(0deg);
 }
 
+/* ===== BOUTON THÈME MOBILE ===== */
+/**
+ * Styles spécifiques pour le bouton de thème dans le menu mobile
+ */
+.theme-mobile-item {
+    display: none; /* Caché par défaut (version desktop) */
+}
+
+.theme-toggle-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    margin-top: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.theme-toggle-mobile {
+    background: rgba(100, 255, 218, 0.1);
+    border: 1px solid rgba(100, 255, 218, 0.3);
+    color: var(--accent-color);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle-mobile:hover {
+    background: rgba(100, 255, 218, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.theme-toggle-container span {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+/* Adaptation pour le mode clair */
+[data-theme="light"] .theme-toggle-mobile {
+    background: rgba(74, 108, 247, 0.1);
+    border: 1px solid rgba(74, 108, 247, 0.3);
+}
+
+[data-theme="light"] .theme-toggle-mobile:hover {
+    background: rgba(74, 108, 247, 0.2);
+}
+
 /* ===== BOUTON MENU MOBILE ===== */
+/**
+ * Bouton hamburger pour ouvrir/fermer le menu en mode mobile
+ */
 .menu-toggle {
     display: none;
     background: none;
@@ -192,7 +265,20 @@ body {
     background-color: rgba(100, 255, 218, 0.1);
 }
 
+/* Animation pour l'icône du menu hamburger */
+.menu-toggle.active i:before {
+    content: "\f00d"; /* Change l'icône en "X" quand actif */
+}
+
+/* Styles pour l'état actif du bouton menu */
+.menu-toggle.active {
+    background-color: rgba(100, 255, 218, 0.2);
+}
+
 /* ===== OVERLAY ===== */
+/**
+ * Overlay semi-transparent qui apparaît derrière le menu mobile
+ */
 .menu-overlay {
     position: fixed;
     top: 0;
@@ -211,69 +297,10 @@ body {
     visibility: visible;
 }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 968px) {
-    .menu-toggle {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .nav-menu {
-        position: fixed;
-        top: 0;
-        left: -100%;
-        width: 80%;
-        max-width: 300px;
-        height: 100vh;
-        background: var(--menu-bg);
-        transition: left 0.4s ease;
-        padding: 6rem 2rem 2rem;
-        flex-direction: column;
-        gap: 2rem;
-        overflow-y: auto;
-        z-index: 999;
-        box-shadow: var(--shadow);
-        border-right: 1px solid var(--border-color);
-    }
-
-    .nav-menu.active {
-        left: 0;
-    }
-
-    .nav-link {
-        font-size: 1.2rem;
-        padding: 0.8rem 0;
-        border-bottom: 1px solid var(--border-color);
-    }
-
-    .nav-link.active::after {
-        display: none; /* pas de soulignement mobile */
-    }
-
-    .nav-link.active {
-        color: var(--accent-color);
-        font-weight: bold;
-    }
-}
-
-@media (max-width: 480px) {
-    .header .container {
-        padding: 0 1rem;
-    }
-
-    .logo {
-        font-size: 1.5rem;
-    }
-
-    .theme-toggle,
-    .menu-toggle {
-        width: 40px;
-        height: 40px;
-    }
-}
-
 /* ===== MODE CLAIR ===== */
+/**
+ * Adaptations spécifiques pour le mode clair
+ */
 [data-theme="light"] .header {
     background-color: rgba(255, 255, 255, 0.95);
     border-bottom: 1px solid var(--border-color);
@@ -295,4 +322,112 @@ body {
 
 [data-theme="light"] .menu-toggle:hover {
     background-color: rgba(74, 108, 247, 0.1);
+}
+
+[data-theme="light"] .menu-toggle.active {
+    background-color: rgba(74, 108, 247, 0.2);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+/**
+ * Styles pour les écrans de tablette et mobile
+ */
+@media (max-width: 968px) {
+    /* Afficher le bouton menu mobile */
+    .menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* Cacher le bouton de thème desktop */
+    .theme-toggle-desktop {
+        display: none;
+    }
+    
+    /* Afficher le bouton de thème mobile */
+    .theme-mobile-item {
+        display: block;
+    }
+
+    /* Styles pour le menu mobile */
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background: var(--menu-bg);
+        transition: left 0.4s ease;
+        padding: 6rem 2rem 2rem;
+        flex-direction: column;
+        gap: 1.5rem;
+        overflow-y: auto;
+        z-index: 999;
+        box-shadow: var(--shadow);
+        border-right: 1px solid var(--border-color);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    /* Styles des liens en mode mobile */
+    .nav-link {
+        font-size: 1.2rem;
+        padding: 0.8rem 0;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    .nav-link.active::after {
+        display: none; /* Désactiver le soulignement en mobile */
+    }
+
+    .nav-link.active {
+        color: var(--accent-color);
+        font-weight: bold;
+    }
+    
+    /* Positionnement du bouton de thème en bas du menu mobile */
+    .theme-mobile-item {
+        margin-top: auto; /* Pousse l'élément vers le bas */
+        padding-top: 2rem;
+        border-top: 1px solid var(--border-color);
+    }
+    
+    .theme-toggle-container {
+        justify-content: flex-start;
+        margin-top: 0;
+        padding-top: 0;
+        border-top: none;
+    }
+}
+
+/* Styles pour les très petits écrans */
+@media (max-width: 480px) {
+    .header .container {
+        padding: 0 1rem;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .theme-toggle-desktop,
+    .theme-toggle-mobile,
+    .menu-toggle {
+        width: 40px;
+        height: 40px;
+    }
+    
+    /* Ajustement du menu pour mobile très petit */
+    .nav-menu {
+        width: 85%;
+        padding: 5rem 1.5rem 1.5rem;
+    }
+    
+    .theme-toggle-container span {
+        font-size: 0.9rem;
+    }
 }

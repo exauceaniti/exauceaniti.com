@@ -5,7 +5,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
 
 <header class="header">
     <link rel="stylesheet" href="styles/header.css">
-    <div class=" container header-container">
+    <div class="container header-container">
         <!-- LOGO -->
         <a href="index.php" class="logo">Exaucé Aniti</a>
 
@@ -29,11 +29,22 @@ $current_page = basename($_SERVER['PHP_SELF']);
                 <li><a href="competences.php" class="nav-link <?= ($current_page == 'competences.php') ? 'active' : '' ?>">Compétences</a></li>
                 <li><a href="project.php" class="nav-link <?= ($current_page == 'project.php') ? 'active' : '' ?>">Projets</a></li>
                 <li><a href="contact.php" class="nav-link <?= ($current_page == 'contact.php') ? 'active' : '' ?>">Contact</a></li>
+
+                <!-- Bouton changement de thème pour mobile -->
+                <li class="theme-mobile-item">
+                    <div class="theme-toggle-container">
+                        <button class="theme-toggle theme-toggle-mobile" id="themeToggleMobile" aria-label="Changer le thème">
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
+                        </button>
+                        <span>Changer le thème</span>
+                    </div>
+                </li>
             </ul>
         </nav>
 
-        <!-- Bouton changement de thème -->
-        <button class="theme-toggle" id="themeToggle" aria-label="Changer le thème">
+        <!-- Bouton changement de thème pour desktop -->
+        <button class="theme-toggle theme-toggle-desktop" id="themeToggleDesktop" aria-label="Changer le thème">
             <i class="fas fa-moon"></i>
             <i class="fas fa-sun"></i>
         </button>
