@@ -9,18 +9,18 @@ $current_page = basename($_SERVER['PHP_SELF']);
         <!-- LOGO -->
         <a href="index.php" class="logo">Exaucé Aniti</a>
 
-        <!-- Bouton menu mobile -->
+        <!-- BOUTON MENU MOBILE -->
         <button class="menu-toggle" id="menuToggle" aria-label="Menu">
             <i class="fas fa-bars"></i>
         </button>
 
         <?php
-        // Inclure le fichier du compteur de vues
+        // Inclure le compteur de vues
         require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'functions' . DIRECTORY_SEPARATOR . 'compteur.php';
         ajouter_une_vue();
         ?>
 
-        <!-- Navigation principale -->
+        <!-- NAVIGATION PRINCIPALE -->
         <nav>
             <ul class="nav-menu" id="navMenu">
                 <li><a href="index.php" class="nav-link <?= ($current_page == 'index.php') ? 'active' : '' ?>">Accueil</a></li>
@@ -30,10 +30,10 @@ $current_page = basename($_SERVER['PHP_SELF']);
                 <li><a href="project.php" class="nav-link <?= ($current_page == 'project.php') ? 'active' : '' ?>">Projets</a></li>
                 <li><a href="contact.php" class="nav-link <?= ($current_page == 'contact.php') ? 'active' : '' ?>">Contact</a></li>
 
-                <!-- Bouton changement de thème pour mobile -->
+                <!-- BOUTON DE THÈME MOBILE -->
                 <li class="theme-mobile-item">
                     <div class="theme-toggle-container">
-                        <button class="theme-toggle theme-toggle-mobile" id="themeToggleMobile" aria-label="Changer le thème">
+                        <button class="theme-toggle" id="themeToggleMobile" aria-label="Changer le thème">
                             <i class="fas fa-moon"></i>
                             <i class="fas fa-sun"></i>
                         </button>
@@ -43,7 +43,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
             </ul>
         </nav>
 
-        <!-- Bouton changement de thème pour desktop -->
+        <!-- BOUTON DE THÈME DESKTOP -->
         <button class="theme-toggle theme-toggle-desktop" id="themeToggleDesktop" aria-label="Changer le thème">
             <i class="fas fa-moon"></i>
             <i class="fas fa-sun"></i>
@@ -51,5 +51,5 @@ $current_page = basename($_SERVER['PHP_SELF']);
     </div>
 </header>
 
-<!-- Overlay menu mobile -->
+<!-- OVERLAY MENU MOBILE -->
 <div class="menu-overlay"></div>

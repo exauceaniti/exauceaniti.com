@@ -4,52 +4,52 @@
 
 /* ===== VARIABLES ===== */
 :root {
-    /* Couleurs du thème sombre */
-    --primary-color: #0a192f;
-    --secondary-color: #64ffda;
-    --accent-color: #00bcd4;
+    /* Thème sombre par défaut (référence : JetBrains IntelliJ) */
+    --primary-color: #2b2b2b; /* Fond principal */
+    --secondary-color: #3c3f41; /* Fond secondaire */
+    --accent-color: #64b5f6; /* Accentuation (bleu) */
 
-    --text-dark: #ccd6f6;
-    --text-medium: #8892b0;
-    --text-light: #a8b2d1;
+    --text-dark: #cccccc; /* Texte principal */
+    --text-medium: #a8a8a8; /* Texte secondaire */
+    --text-light: #999999; /* Texte léger */
     --text-white: #ffffff;
 
-    --bg-light: rgba(10, 25, 47, 0.05);
-    --bg-medium: rgba(100, 255, 218, 0.1);
-    --bg-dark: #0a192f;
+    --bg-light: #444444; /* Éléments survolés */
+    --bg-medium: #3c3f41; /* Arrière-plan de modules */
+    --bg-dark: #2b2b2b;
 
-    --shadow-light: 0 10px 30px rgba(0, 0, 0, 0.08);
-    --shadow-medium: 0 15px 40px rgba(0, 0, 0, 0.12);
-    --shadow-heavy: 0 20px 40px rgba(0, 0, 0, 0.15);
+    --shadow-light: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --shadow-medium: 0 10px 25px rgba(0, 0, 0, 0.3);
+    --shadow-heavy: 0 15px 35px rgba(0, 0, 0, 0.4);
 
-    --border-radius: 15px;
-    --transition: all 0.3s ease;
+    --border-radius: 10px;
+    --transition: all 0.3s ease-in-out;
 
-    --gradient-primary: linear-gradient(135deg, #0a192f 0%, #112240 100%);
-    --gradient-secondary: linear-gradient(135deg, #64ffda 0%, #00bcd4 100%);
+    --gradient-primary: linear-gradient(135deg, #2b2b2b 0%, #333333 100%);
+    --gradient-secondary: linear-gradient(135deg, #64b5f6 0%, #42a5f5 100%);
 }
 
 /* ===== THEME CLAIR ===== */
 [data-theme="light"] {
-    --primary-color: #f8f9fa;
-    --secondary-color: #0a192f;
-    --accent-color: #2563eb;
+    --primary-color: #f7f7f7; /* Fond principal */
+    --secondary-color: #ffffff; /* Fond secondaire */
+    --accent-color: #2563eb; /* Accentuation (bleu) */
 
     --text-dark: #1f2937;
     --text-medium: #4b5563;
     --text-light: #6b7280;
     --text-white: #1f2937;
 
-    --bg-light: rgba(248, 249, 250, 0.7);
-    --bg-medium: rgba(10, 25, 47, 0.1);
-    --bg-dark: #e5e7eb;
+    --bg-light: #e5e7eb;
+    --bg-medium: #d1d5db;
+    --bg-dark: #f0f0f0;
 
-    --shadow-light: 0 10px 30px rgba(0, 0, 0, 0.05);
-    --shadow-medium: 0 15px 40px rgba(0, 0, 0, 0.08);
-    --shadow-heavy: 0 20px 40px rgba(0, 0, 0, 0.1);
+    --shadow-light: 0 5px 15px rgba(0, 0, 0, 0.05);
+    --shadow-medium: 0 10px 25px rgba(0, 0, 0, 0.08);
+    --shadow-heavy: 0 15px 35px rgba(0, 0, 0, 0.1);
 
-    --gradient-primary: linear-gradient(135deg, #f8f9fa 0%, #e5e7eb 100%);
-    --gradient-secondary: linear-gradient(135deg, #0a192f 0%, #1e40af 100%);
+    --gradient-primary: linear-gradient(135deg, #f7f7f7 0%, #f0f0f0 100%);
+    --gradient-secondary: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
 }
 
 /* ===== RESET & BASE ===== */

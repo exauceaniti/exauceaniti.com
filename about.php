@@ -20,7 +20,7 @@
 
                 <div class="about-content">
                     <div class="about-image">
-                        <img src="images/photo.png" alt="Exaucé Aniti Mungufeni - Développeur Web">
+                        <img src="images/Profil.png" alt="Exaucé Aniti Mungufeni - Développeur Web">
                     </div>
 
                     <div class="about-text">
@@ -105,7 +105,9 @@
                     <ul>
                         <li><a href="../index.php">Accueil</a></li>
                         <li><a href="about.php">À propos</a></li>
-                        <!-- <li><a href="portfolio.php">Portfolio</a></li> -->
+                        <li><a href="contact.php">formations</a></li>
+                        <li><a href="contact.php">compétences</a></li>
+                        <li><a href="contact.php">Projects</a></li>
                         <li><a href="contact.php">Contact</a></li>
                     </ul>
                 </div>

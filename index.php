@@ -29,7 +29,7 @@
                     </div>
                 </div>
                 <div class="hero-visual">
-                    <img src="images/photo.png" alt="Exaucé Aniti - Développeur Web" class="hero-image">
+                    <img src="images/Profil.png" alt="Exaucé Aniti - Développeur Web" class="hero-image">
                 </div>
             </div>
         </section>
@@ -265,7 +265,7 @@
                         <li><a href="about.php">À propos</a></li>
                         <li><a href="formations.php">Formations</a></li>
                         <li><a href="competences.php">Compétences</a></li>
-                        <li><a href="project.php">Projets</a></li>
+                        <li><a href="project.php">Projects</a></li>
                         <li><a href="contact.php">Contact</a></li>
                     </ul>
                 </div>
@@ -296,7 +296,7 @@
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-map-marker-alt"></i>
-                            <span>RDC, Butembo, Kalemire</span>
+                            <span>RDC, Butembo, Kalemire</span>2
                         </div>
                     </div>
 

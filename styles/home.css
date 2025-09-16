@@ -20,6 +20,8 @@
     --gradient-secondary: linear-gradient(135deg, #64ffda 0%, #00bcd4 100%);
 }
 
+
+
 /* Thème clair */
 [data-theme="light"] {
     --primary-color: #f8f9fa;
@@ -549,15 +551,20 @@ body {
     color: var(--text-dark);
 }
 
-/* ===== PIED DE PAGE ===== */
+/* ========================================================= */
+/* ======================= PIED DE PAGE ==================== */
+/* ========================================================= */
+
+/* SECTION PRINCIPALE DU FOOTER */
 .footer {
-    background: var(--gradient-primary);
-    color: var(--text-dark);
-    padding: 4rem 0 2rem;
+    background: var(--gradient-primary); /* Dégradé principal défini dans tes variables */
+    color: var(--text-dark); /* Couleur du texte */
+    padding: 4rem 0 2rem; /* Espacement interne (haut/bas) */
     position: relative;
     overflow: hidden;
 }
 
+/* Effets décoratifs d'arrière-plan avec dégradés radiaux */
 .footer::before {
     content: '';
     position: absolute;
@@ -568,27 +575,30 @@ body {
     background-image:
         radial-gradient(circle at 20% 30%, rgba(37, 99, 235, 0.05) 0%, transparent 40%),
         radial-gradient(circle at 80% 70%, rgba(6, 182, 212, 0.05) 0%, transparent 40%);
-    pointer-events: none;
+    pointer-events: none; /* Empêche toute interaction avec cet élément */
 }
 
 .footer .container {
     position: relative;
-    z-index: 1;
+    z-index: 1; /* Place le contenu au-dessus du décor */
 }
 
+/* ================== FOOTER TOP ================== */
 .footer-top {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr; /* Deux colonnes égales */
     gap: 3rem;
     margin-bottom: 3rem;
     padding-bottom: 3rem;
-    border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+    border-bottom: 1px solid rgba(100, 255, 218, 0.1); /* Ligne séparatrice */
 }
 
+/* Version claire du footer-top */
 [data-theme="light"] .footer-top {
     border-bottom: 1px solid rgba(10, 25, 47, 0.1);
 }
 
+/* TITRE ET TEXTE DE LA SECTION PROJET */
 .footer-project h2 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
@@ -601,6 +611,7 @@ body {
     line-height: 1.6;
 }
 
+/* Liste d’informations (icône + texte) */
 .project-info {
     display: flex;
     flex-direction: column;
@@ -619,6 +630,7 @@ body {
     width: 20px;
 }
 
+/* ================== FORMULAIRE CONTACT ================== */
 .footer-form h3 {
     font-size: 1.3rem;
     margin-bottom: 1.5rem;
@@ -641,12 +653,14 @@ body {
     transition: var(--transition);
 }
 
+/* Version claire du formulaire */
 [data-theme="light"] .form-group input,
 [data-theme="light"] .form-group textarea {
     border: 1px solid rgba(10, 25, 47, 0.2);
     background-color: rgba(10, 25, 47, 0.05);
 }
 
+/* Focus sur les champs */
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
@@ -664,6 +678,7 @@ body {
     min-height: 120px;
 }
 
+/* ================== FOOTER CONTENT ================== */
 .footer-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -671,6 +686,7 @@ body {
     margin-bottom: 3rem;
 }
 
+/* Titres des colonnes */
 .footer-section h3 {
     font-size: 1.2rem;
     margin-bottom: 1.2rem;
@@ -679,6 +695,7 @@ body {
     padding-bottom: 0.8rem;
 }
 
+/* Ligne décorative sous les titres */
 .footer-section h3::after {
     content: '';
     position: absolute;
@@ -689,6 +706,7 @@ body {
     background-color: var(--secondary-color);
 }
 
+/* Texte et liens */
 .footer-section p {
     margin-bottom: 1rem;
     line-height: 1.6;
@@ -708,6 +726,7 @@ body {
     transform: translateX(5px);
 }
 
+/* ================== CONTACT + RÉSEAUX ================== */
 .contact-info {
     display: flex;
     flex-direction: column;
@@ -727,6 +746,7 @@ body {
     width: 20px;
 }
 
+/* Icônes réseaux sociaux */
 .social-links {
     display: flex;
     gap: 1rem;
@@ -761,6 +781,7 @@ body {
     background-color: rgba(10, 25, 47, 0.2);
 }
 
+/* ================== FOOTER BOTTOM ================== */
 .footer-bottom {
     text-align: center;
     padding-top: 2rem;
@@ -792,6 +813,33 @@ body {
 .legal-links a:hover {
     color: var(--secondary-color);
 }
+
+/* ================== BOUTON DANS LE FOOTER ================== */
+.footer-about .btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+/* Style outline (bordure) */
+.footer-about .btn-outline {
+    border: 2px solid var(--secondary-color);
+    color: var(--secondary-color);
+    background: transparent;
+}
+
+/* Effet hover du bouton */
+.footer-about .btn-outline:hover {
+    background: var(--secondary-color);
+    color: var(--primary-color); /* Contraste avec ta couleur principale */
+    box-shadow: 0 4px 12px rgba(100, 255, 218, 0.2);
+}
+
 
 /* ===== DESIGN RESPONSIVE ===== */
 @media (max-width: 968px) {
