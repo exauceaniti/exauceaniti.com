@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compétences - exauceaniti</title>
 
-    <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/skills.css">
     <!-- Font Awesome pour les icônes -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
