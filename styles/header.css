@@ -1,150 +1,119 @@
 /* ==========================================================================
-   HEADER STYLES
-   Styles pour l'en-tête du site avec navigation responsive
-   et système de thème clair/sombre
+   HEADER PERSONNALISÉ
+   Styles modernes pour le header avec menu responsive
+   et thème clair/sombre basé sur vos variables
    ========================================================================== */
 
-/* ===== VARIABLES ET IMPORTS ===== */
-@import url('theme-variables.css');
-
-/* ===== RÉINITIALISATION ===== */
-/* Réinitialisation des styles par défaut pour une base cohérente */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* ===== STYLES DE BASE ===== */
-body {
-    font-family: var(--font-family);
-    background-color: var(--bg-primary);
-    color: var(--text-primary);
-    line-height: 1.6;
-    padding-top: 80px; /* Compensation pour le header fixe */
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
 /* ===== HEADER PRINCIPAL ===== */
-/**
- * Conteneur principal de l'en-tête
- * Utilise un effet de flou d'arrière-plan pour un look moderne
- */
 .header {
-    background-color: var(--menu-bg);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    color: var(--text-primary);
-    padding: 1.2rem 0;
+    background: var(--bg-dark); /* Couleur de fond sombre */
+    color: var(--text-dark);
     position: fixed;
-    width: 100%;
     top: 0;
+    left: 0;
+    width: 100%;
     z-index: 1000;
-    box-shadow: var(--shadow);
+    padding: 1.2rem 0;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: var(--shadow-light);
     transition: var(--transition);
-    border-bottom: 1px solid var(--border-color);
 }
 
-/* Header réduit au défilement pour économiser l'espace */
+/* Réduction du header au scroll */
 .header.scrolled {
     padding: 0.8rem 0;
+    box-shadow: var(--shadow-medium);
 }
 
-/* Conteneur interne pour l'alignement des éléments */
+/* Conteneur interne */
 .header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
 }
 
-/* ===== LOGO ===== */
-/**
- * Style du logo avec effet d'interaction
- */
+/* ===== LOGO (Image) ===== */
 .logo {
-    color: var(--accent-color);
-    text-decoration: none;
-    font-size: 1.8rem;
-    font-weight: 700;
-    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px; /* taille max du header */
     transition: var(--transition);
 }
 
-.logo:hover {
-    opacity: 0.9;
-    transform: translateY(-1px);
+.logo img {
+    height: 65px;
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* ===== NAVIGATION PRINCIPALE ===== */
-/**
- * Menu de navigation principal - version desktop
- */
+/* Hover effet subtil */
+.logo img:hover {
+    transform: scale(1.5);
+    opacity: 0.95;
+}
+
+/* Mode clair/sombre (aucun changement de couleur car c’est une image) */
+[data-theme="light"] .logo img {
+    filter: brightness(1) contrast(1.05);
+}
+
+/* ===== NAVIGATION ===== */
 .nav-menu {
     display: flex;
+    gap: 2.5rem;
     list-style: none;
-    gap: 2rem;
-    margin: 0;
-    padding: 0;
 }
 
 .nav-menu li {
     position: relative;
 }
 
-/* Style des liens de navigation */
+/* Liens de navigation */
 .nav-link {
-    color: var(--text-primary);
-    text-decoration: none;
+    color: var(--text-dark);
     font-weight: 500;
-    transition: var(--transition);
+    text-decoration: none;
     padding: 0.5rem 0;
-    position: relative;
     font-size: 0.95rem;
-    display: block;
+    position: relative;
+    transition: var(--transition);
 }
 
-/* Effet hover et état actif */
 .nav-link:hover,
 .nav-link.active {
     color: var(--accent-color);
 }
 
-/* Indicateur visuel pour la page active */
+/* Soulignement animé de la page active */
 .nav-link.active::after {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -4px;
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: var(--accent-color);
+    background: var(--accent-color);
+    border-radius: var(--border-radius);
     transform: scaleX(1);
     transition: transform 0.3s ease;
 }
 
-/* ===== BOUTON CHANGEMENT DE THÈME ===== */
-/**
- * Bouton pour alterner entre les modes clair/sombre
- * Positionné dans la barre de navigation en desktop
- */
+/* ===== BOUTON THEME ===== */
 .theme-toggle {
-    background: rgba(100, 255, 218, 0.1);
-    border: 1px solid rgba(100, 255, 218, 0.3);
-    color: var(--accent-color);
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 1px solid rgba(100, 255, 218, 0.3);
+    background: rgba(100, 255, 218, 0.1);
+    color: var(--accent-color);
+    cursor: pointer;
     position: relative;
     transition: all 0.3s ease;
 }
@@ -152,13 +121,13 @@ body {
 .theme-toggle:hover {
     background: rgba(100, 255, 218, 0.2);
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-light);
 }
 
-/* Gestion des icônes (lune/soleil) */
+/* Icônes lune/soleil */
 .theme-toggle i {
     position: absolute;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: all 0.3s ease;
     font-size: 1.1rem;
 }
 
@@ -171,15 +140,33 @@ body {
     opacity: 0;
     transform: rotate(90deg);
 }
+.theme-mobile-item {
+    display: none; /* visible seulement sur mobile */
+}
 
-/* Adaptation pour le mode clair */
+/* Thème clair */
+[data-theme="light"] .header {
+    background: var(--bg-light);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    box-shadow: var(--shadow-light);
+}
+
+[data-theme="light"] .logo {
+    color: var(--accent-color);
+}
+
+[data-theme="light"] .nav-link {
+    color: var(--text-dark);
+}
+
+[data-theme="light"] .nav-link:hover,
+[data-theme="light"] .nav-link.active {
+    color: var(--accent-color);
+}
+
 [data-theme="light"] .theme-toggle {
     background: rgba(74, 108, 247, 0.1);
     border: 1px solid rgba(74, 108, 247, 0.3);
-}
-
-[data-theme="light"] .theme-toggle:hover {
-    background: rgba(74, 108, 247, 0.2);
 }
 
 [data-theme="light"] .theme-toggle .fa-moon {
@@ -192,100 +179,34 @@ body {
     transform: rotate(0deg);
 }
 
-/* ===== BOUTON THÈME MOBILE ===== */
-/**
- * Styles spécifiques pour le bouton de thème dans le menu mobile
- */
-.theme-mobile-item {
-    display: none; /* Caché par défaut (version desktop) */
-}
-
-.theme-toggle-container {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem 0;
-    margin-top: 1rem;
-    border-top: 1px solid var(--border-color);
-}
-
-.theme-toggle-mobile {
-    background: rgba(100, 255, 218, 0.1);
-    border: 1px solid rgba(100, 255, 218, 0.3);
-    color: var(--accent-color);
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    transition: all 0.3s ease;
-}
-
-.theme-toggle-mobile:hover {
-    background: rgba(100, 255, 218, 0.2);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.theme-toggle-container span {
-    color: var(--text-primary);
-    font-weight: 500;
-}
-
-/* Adaptation pour le mode clair */
-[data-theme="light"] .theme-toggle-mobile {
-    background: rgba(74, 108, 247, 0.1);
-    border: 1px solid rgba(74, 108, 247, 0.3);
-}
-
-[data-theme="light"] .theme-toggle-mobile:hover {
-    background: rgba(74, 108, 247, 0.2);
-}
-
-/* ===== BOUTON MENU MOBILE ===== */
-/**
- * Bouton hamburger pour ouvrir/fermer le menu en mode mobile
- */
+/* ===== MENU MOBILE ===== */
 .menu-toggle {
-    display: none;
+    display: none; /* visible seulement sur mobile */
     background: none;
     border: none;
     cursor: pointer;
     width: 45px;
     height: 45px;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-    z-index: 1001;
+    border-radius: 8px;
+    transition: var(--transition);
 }
 
 .menu-toggle:hover {
-    background-color: rgba(100, 255, 218, 0.1);
+    background: rgba(100, 255, 218, 0.1);
 }
 
-/* Animation pour l'icône du menu hamburger */
 .menu-toggle.active i:before {
-    content: "\f00d"; /* Change l'icône en "X" quand actif */
+    content: "\f00d"; /* X quand menu actif */
 }
 
-/* Styles pour l'état actif du bouton menu */
-.menu-toggle.active {
-    background-color: rgba(100, 255, 218, 0.2);
-}
-
-/* ===== OVERLAY ===== */
-/**
- * Overlay semi-transparent qui apparaît derrière le menu mobile
- */
+/* Overlay */
 .menu-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: var(--overlay-color);
+    background: rgba(10, 25, 47, 0.85);
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
@@ -297,60 +218,18 @@ body {
     visibility: visible;
 }
 
-/* ===== MODE CLAIR ===== */
-/**
- * Adaptations spécifiques pour le mode clair
- */
-[data-theme="light"] .header {
-    background-color: rgba(255, 255, 255, 0.95);
-    border-bottom: 1px solid var(--border-color);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-[data-theme="light"] .logo {
-    color: var(--text-primary);
-}
-
-[data-theme="light"] .nav-link {
-    color: var(--text-primary);
-}
-
-[data-theme="light"] .nav-link:hover,
-[data-theme="light"] .nav-link.active {
-    color: var(--accent-color);
-}
-
-[data-theme="light"] .menu-toggle:hover {
-    background-color: rgba(74, 108, 247, 0.1);
-}
-
-[data-theme="light"] .menu-toggle.active {
-    background-color: rgba(74, 108, 247, 0.2);
-}
-
-/* ===== RESPONSIVE DESIGN ===== */
-/**
- * Styles pour les écrans de tablette et mobile
- */
+/* Menu mobile */
 @media (max-width: 968px) {
-    /* Afficher le bouton menu mobile */
     .menu-toggle {
         display: flex;
         align-items: center;
         justify-content: center;
     }
-    
-    /* Cacher le bouton de thème desktop */
+
     .theme-toggle-desktop {
         display: none;
     }
-    
-    /* Afficher le bouton de thème mobile */
-    .theme-mobile-item {
-        display: block;
-    }
 
-    /* Styles pour le menu mobile */
     .nav-menu {
         position: fixed;
         top: 0;
@@ -358,53 +237,38 @@ body {
         width: 80%;
         max-width: 300px;
         height: 100vh;
-        background: var(--menu-bg);
-        transition: left 0.4s ease;
-        padding: 6rem 2rem 2rem;
+        background: var(--bg-dark);
         flex-direction: column;
+        padding: 6rem 2rem 2rem;
         gap: 1.5rem;
-        overflow-y: auto;
+        transition: left 0.4s ease;
+        box-shadow: var(--shadow-medium);
         z-index: 999;
-        box-shadow: var(--shadow);
-        border-right: 1px solid var(--border-color);
+        border-right: 1px solid rgba(255,255,255,0.05);
     }
 
     .nav-menu.active {
         left: 0;
     }
 
-    /* Styles des liens en mode mobile */
     .nav-link {
         font-size: 1.2rem;
-        padding: 0.8rem 0;
-        border-bottom: 1px solid var(--border-color);
+        border-bottom: 1px solid rgba(255,255,255,0.05);
     }
 
     .nav-link.active::after {
-        display: none; /* Désactiver le soulignement en mobile */
+        display: none;
     }
 
-    .nav-link.active {
-        color: var(--accent-color);
-        font-weight: bold;
-    }
-    
-    /* Positionnement du bouton de thème en bas du menu mobile */
     .theme-mobile-item {
-        margin-top: auto; /* Pousse l'élément vers le bas */
-        padding-top: 2rem;
-        border-top: 1px solid var(--border-color);
-    }
-    
-    .theme-toggle-container {
-        justify-content: flex-start;
-        margin-top: 0;
-        padding-top: 0;
-        border-top: none;
+        display: flex;
+        margin-top: auto;
+        border-top: 1px solid rgba(255,255,255,0.05);
+        padding-top: 1.5rem;
     }
 }
 
-/* Styles pour les très petits écrans */
+/* ===== PETITS ÉCRANS ===== */
 @media (max-width: 480px) {
     .header .container {
         padding: 0 1rem;
@@ -414,20 +278,14 @@ body {
         font-size: 1.5rem;
     }
 
-    .theme-toggle-desktop,
-    .theme-toggle-mobile,
+    .theme-toggle,
     .menu-toggle {
         width: 40px;
         height: 40px;
     }
-    
-    /* Ajustement du menu pour mobile très petit */
+
     .nav-menu {
         width: 85%;
         padding: 5rem 1.5rem 1.5rem;
-    }
-    
-    .theme-toggle-container span {
-        font-size: 0.9rem;
     }
 }

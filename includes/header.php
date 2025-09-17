@@ -1,13 +1,10 @@
-<?php
-// Détermination de la page active
-$current_page = basename($_SERVER['PHP_SELF']);
-?>
-
 <header class="header">
     <link rel="stylesheet" href="styles/header.css">
     <div class="container header-container">
-        <!-- LOGO -->
-        <a href="index.php" class="logo">Exaucé Aniti</a>
+        <!-- LOGO (image au lieu de lien texte) -->
+        <div class="logo">
+            <img src="../images/logo.png" alt="Logo Exaucé Aniti">
+        </div>
 
         <!-- BOUTON MENU MOBILE -->
         <button class="menu-toggle" id="menuToggle" aria-label="Menu">
@@ -15,7 +12,6 @@ $current_page = basename($_SERVER['PHP_SELF']);
         </button>
 
         <?php
-        // Inclure le compteur de vues
         require_once dirname(__DIR__) . DIRECTORY_SEPARATOR . 'functions' . DIRECTORY_SEPARATOR . 'compteur.php';
         ajouter_une_vue();
         ?>

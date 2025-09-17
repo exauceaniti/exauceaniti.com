@@ -7,14 +7,13 @@
     <title>Projets - Mon Portfolio</title>
 
     <!-- Font Awesome pour les icônes -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Feuilles de style -->
-    <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/projects.css">
     <link rel="stylesheet" href="styles/cards.css">
-    <!-- <link rel="stylesheet" href="styles/footer.css"> -->
 </head>
 
 <body>

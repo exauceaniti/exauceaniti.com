@@ -7,12 +7,10 @@ $current_page = basename($_SERVER['PHP_SELF']);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Mon CV</title>
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/header.css">
+    <title>Contact - exauceaniti</title>
     <link rel="stylesheet" href="styles/contact.css">
-    <link rel="stylesheet" href="styles/footer.css">
     <!-- Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
@@ -107,7 +105,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                             <textarea id="message" name="message" placeholder="Décrivez votre projet ou posez-moi vos questions..." required></textarea>
                         </div>
 
-                        <button type="submit" class="submit-btn" id="submitBtn">
+                        <button type="submit" class="submit-btn btn btn-primary" id="submitBtn">
                             <i class="fas fa-paper-plane"></i>
                             Envoyer le message
                         </button>

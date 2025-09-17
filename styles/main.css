@@ -3,19 +3,27 @@
 /* ============================= */
 
 /* ===== VARIABLES ===== */
-:root {
+/* :root { */
     /* Thème sombre par défaut (référence : JetBrains IntelliJ) */
-    --primary-color: #2b2b2b; /* Fond principal */
-    --secondary-color: #3c3f41; /* Fond secondaire */
-    --accent-color: #64b5f6; /* Accentuation (bleu) */
+    /* Fond principal */
+    /* Fond secondaire */
+    /* Accentuation (bleu) */
+    /* --primary-color: #2b2b2b;
+    --secondary-color: #3c3f41;
+    --accent-color: #64b5f6; */
 
-    --text-dark: #cccccc; /* Texte principal */
-    --text-medium: #a8a8a8; /* Texte secondaire */
-    --text-light: #999999; /* Texte léger */
-    --text-white: #ffffff;
+    /* Texte principal */
+    /* Texte secondaire */
+    /* Texte léger */
+    /* --text-dark: #cccccc;
+    --text-medium: #a8a8a8;
+    --text-light: #999999;
+    --text-white: #ffffff; */
 
-    --bg-light: #444444; /* Éléments survolés */
-    --bg-medium: #3c3f41; /* Arrière-plan de modules */
+    /* Éléments survolés */
+    /* Arrière-plan de modules */
+    /* --bg-light: #444444;
+    --bg-medium: #3c3f41;
     --bg-dark: #2b2b2b;
 
     --shadow-light: 0 5px 15px rgba(0, 0, 0, 0.2);
@@ -27,13 +35,16 @@
 
     --gradient-primary: linear-gradient(135deg, #2b2b2b 0%, #333333 100%);
     --gradient-secondary: linear-gradient(135deg, #64b5f6 0%, #42a5f5 100%);
-}
+} */
 
-/* ===== THEME CLAIR ===== */
-[data-theme="light"] {
-    --primary-color: #f7f7f7; /* Fond principal */
-    --secondary-color: #ffffff; /* Fond secondaire */
-    --accent-color: #2563eb; /* Accentuation (bleu) */
+    /* ===== THEME CLAIR ===== */
+    /* Fond principal */
+    /* Fond secondaire */
+    /* Accentuation (bleu) */
+/* [data-theme="light"] {
+    --primary-color: #f7f7f7;
+    --secondary-color: #ffffff;
+    --accent-color: #2563eb;
 
     --text-dark: #1f2937;
     --text-medium: #4b5563;
@@ -50,10 +61,10 @@
 
     --gradient-primary: linear-gradient(135deg, #f7f7f7 0%, #f0f0f0 100%);
     --gradient-secondary: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
-}
+} */
 
 /* ===== RESET & BASE ===== */
-* {
+/* * {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -78,10 +89,10 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1.5rem;
-}
+} */
 
 /* ===== UTILITAIRES GLOBAUX ===== */
-.section {
+/* .section {
     padding: 5rem 0;
 }
 
@@ -112,10 +123,10 @@ body {
     max-width: 600px;
     margin: 0 auto;
     text-align: center;
-}
+} */
 
 /* ===== RESPONSIVE GLOBAL ===== */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .section {
         padding: 3rem 0;
     }
@@ -123,4 +134,4 @@ body {
     .section-title {
         font-size: 2rem;
     }
-}
+} */
