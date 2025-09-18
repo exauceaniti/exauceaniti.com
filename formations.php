@@ -83,7 +83,7 @@
             </div>
         </section>
 
-        <div class="footer-projects-contact">
+        <div class="signale-section">
             <h2>Avez vous un trucs a nous signaler !</h2>
             <p>Discutons Maintenant et faisons la mise au point de ce que vous voulez</p>
             <a href="contact.php" class="btn-projects-contact">
