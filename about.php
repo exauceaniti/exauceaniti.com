@@ -91,53 +91,6 @@
         </section>
     </main>
 
-    <!-- Pied de page -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Exaucé Aniti</h3>
-                    <p>Développeur web passionné par la création d'expériences numériques exceptionnelles. Étudiant en Génie Informatique, je me spécialise dans le développement web et mobile.</p>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Liens rapides</h4>
-                    <ul>
-                        <li><a href="../index.php">Accueil</a></li>
-                        <li><a href="about.php">À propos</a></li>
-                        <li><a href="contact.php">formations</a></li>
-                        <li><a href="contact.php">compétences</a></li>
-                        <li><a href="contact.php">Projects</a></li>
-                        <li><a href="contact.php">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Contactez-moi</h4>
-                    <ul>
-                        <li><i class="fas fa-envelope"></i> exauceaniti@gmail.com</li>
-                        <li><i class="fas fa-phone"></i> +243 820 853 461</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Butembo, RDC, Kalemire</li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Suivez-moi</h4>
-                    <div class="social-links">
-                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2025 Exaucé Aniti Mungufeni. Tous droits réservés.</p>
-            </div>
-        </div>
-    </footer>
-
     <script>
         // Script pour le menu responsive
         document.addEventListener('DOMContentLoaded', function() {
@@ -153,6 +106,8 @@
         });
     </script>
 
+
+    <?php include 'includes/footer.php'; ?>
     <script src="scripts/main.js"></script>
     <script src="scripts/theme.js"></script>
 </body>

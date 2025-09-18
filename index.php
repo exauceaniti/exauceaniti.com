@@ -24,8 +24,14 @@
                     <h1 class="hero-title">Développeur Web<span class="accent">Créatif & Passionné</span></h1>
                     <p class="hero-description">Je conçois et développe des expériences web modernes, fonctionnelles et esthétiques qui marquent les esprits.</p>
                     <div class="hero-actions">
-                        <a href="project.php" class="btn btn-primary">Voir mes projets</a>
-                        <a href="contact.php" class="btn btn-secondary">Me contacter</a>
+                        <a href="project.php" class="btn btn-primary">
+                            <i class="fas fa-briefcase"></i>
+                            Voir mes projets
+                        </a>
+                        <a href="contact.php" class="btn btn-secondary">
+                            <i class="fas fa-envelope"></i>
+                            Me contacter
+                        </a>
                     </div>
                 </div>
                 <div class="hero-visual">
@@ -201,129 +207,18 @@
                 </div>
 
                 <div class="section-actions">
-                    <a href="project.php" class="btn btn-outline">Voir tous les projets</a>
+                    <a href="project.php" class="btn btn-outline">
+                        <i class="fas fa-briefcase"></i>
+                        Voir tous les projets
+                    </a>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <!-- SECTION SUPÉRIEURE : PROJET + FORMULAIRE -->
-            <div class="footer-top">
-                <div class="footer-project">
-                    <h2>Parlons de votre projet</h2>
-                    <p>Vous avez une idée de projet web ? Discutons-en ensemble pour la concrétiser.</p>
-                    <div class="project-info">
-                        <div class="info-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>exauceaniti@gmail.com</span>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-phone"></i>
-                            <span>+243 820 853 461</span>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-clock"></i>
-                            <span>Réponse sous 24h</span>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="footer-form">
-                    <h3>Envoyez un message</h3>
-                    <form action="process-form.php" method="POST" id="footer-contact-form">
-                        <div class="form-group">
-                            <input type="text" name="name" placeholder="Votre nom complet" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" name="email" placeholder="Votre adresse email" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea name="message" placeholder="Décrivez votre projet..." rows="4" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Envoyer le message</button>
-                    </form>
-                </div>
-            </div>
 
-            <!-- CONTENEUR PRINCIPAL DU FOOTER -->
-            <div class="footer-content">
-                <!-- PREMIÈRE COLONNE : DESCRIPTION ET APPEL À L'ACTION -->
-                <div class="footer-section footer-about">
-                    <h3>Exaucé Aniti - Développeur Web</h3>
-                    <p>Je crée des expériences web modernes et fonctionnelles qui aident les entreprises à prospérer en ligne.</p>
-                    <a href="contact.php" class="btn btn-outline">Démarrer un projet</a>
-                </div>
-
-                <!-- DEUXIÈME COLONNE : LIENS DE NAVIGATION RAPIDE -->
-                <div class="footer-section">
-                    <h3>Navigation</h3>
-                    <ul>
-                        <li><a href="index.php">Accueil</a></li>
-                        <li><a href="about.php">À propos</a></li>
-                        <li><a href="formations.php">Formations</a></li>
-                        <li><a href="competences.php">Compétences</a></li>
-                        <li><a href="project.php">Projects</a></li>
-                        <li><a href="contact.php">Contact</a></li>
-                    </ul>
-                </div>
-
-                <!-- TROISIÈME COLONNE : SERVICES OFFERTS -->
-                <div class="footer-section">
-                    <h3>Services</h3>
-                    <ul>
-                        <li><a href="#">Développement Frontend</a></li>
-                        <li><a href="#">Développement Backend</a></li>
-                        <li><a href="#">Sites E-commerce</a></li>
-                        <li><a href="#">Applications Web</a></li>
-                        <li><a href="#">Refonte de sites</a></li>
-                    </ul>
-                </div>
-
-                <!-- QUATRIÈME COLONNE : COORDONNÉES ET RÉSEAUX SOCIAUX -->
-                <div class="footer-section footer-contact">
-                    <h3>Restons en contact</h3>
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>exauceaniti@gmail.com</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <span>+243 820 853 461</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>RDC, Butembo, Kalemire</span>2
-                        </div>
-                    </div>
-
-                    <div class="social-links">
-                        <a href="https://wa.me/243820853461" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                        <a href="mailto:exauce.aniti@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
-                        <a href="https://www.facebook.com/exauce.aniti" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://github.com/exauceaniti" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/exauce-aniti" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- BARRE DE BAS DE PAGE : DROITS D'AUTEUR -->
-            <div class="footer-bottom">
-                <div class="footer-bottom-content">
-                    <p>&copy; 2025 Exaucé Aniti. Tous droits réservés.</p>
-                    <div class="legal-links">
-                        <a href="#">Politique de confidentialité</a>
-                        <a href="#">Conditions d'utilisation</a>
-                        <a href="#">Mentions légales</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
+    <?php include 'includes/footer.php'; ?>
     <script src="scripts/main.js"></script>
     <script src="scripts/theme.js"></script>
 </body>
