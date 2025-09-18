@@ -7,19 +7,13 @@
     <title>Projets - Mon Portfolio</title>
 
     <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="styles/projects.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Feuilles de style -->
-    <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/projects.css">
-    <link rel="stylesheet" href="styles/cards.css">
 </head>
 
 <body>
-    <!-- Inclusion de l'en-tête du site -->
     <?php include 'includes/header.php'; ?>
-
     <main class="main-content">
         <section class="projects-section">
             <div class="container">
@@ -127,6 +121,37 @@
             </a>
         </div>
     </main>
+
+    <script>
+        // Animation pour les cartes de projet
+        document.addEventListener('DOMContentLoaded', function() {
+            const projectCards = document.querySelectorAll('.project-card');
+
+            // Fonction pour vérifier si un élément est dans le viewport
+            function isInViewport(element) {
+                const rect = element.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
+
+            // Fonction pour gérer l'animation au scroll
+            function checkScroll() {
+                projectCards.forEach(card => {
+                    if (isInViewport(card)) {
+                        card.style.animationPlayState = 'running';
+                    }
+                });
+            }
+            // Vérifier au chargement initial
+            checkScroll();
+            // Vérifier pendant le défilement
+            window.addEventListener('scroll', checkScroll);
+        });
+    </script>
 
     <?php include 'includes/footer.php'; ?>
     <script src="scripts/main.js"></script>
