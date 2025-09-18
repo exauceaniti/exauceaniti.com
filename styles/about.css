@@ -195,7 +195,8 @@ body {
     border: 1px solid rgba(100, 255, 218, 0.1);
     background: rgba(23, 42, 69, 0.7);
     box-shadow: var(--shadow-light);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 
 .info-item {
